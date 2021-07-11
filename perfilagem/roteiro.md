@@ -1,7 +1,7 @@
-ngelo Leite Medeiros Goes
-Angelo Marcelino Cordeiro
-Jhonat Heberson Avelino de Souza
-Mauricio Thiago Ferreira de Lima
+- Jhonat Heberson Avelino de Souza
+- angelo Leite Medeiros Goes
+- Angelo Marcelino Cordeiro
+- Mauricio Thiago Ferreira de Lima
 
 # Roteiro da apresentação
 

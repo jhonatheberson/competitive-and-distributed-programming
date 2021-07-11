@@ -1,0 +1,40 @@
+PARSEC Compile Information
+==========================
+Package 'parsec.streamcluster'
+Built on qua jun 30 16:42:30 -03 2021
+
+Configure arguments:  --prefix=/home/itrack/Documentos/competitive-and-distributed-programming/parsec-3.0/pkgs/kernels/streamcluster/inst/amd64-linux.gcc
+
+Environment modifications: version=pthreads
+
+CC: /usr/bin/gcc
+Version: gcc (Debian 8.3.0-6) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+CFLAGS:  -O3 -g -funroll-loops -fprefetch-loop-arrays -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206
+
+CXX: /usr/bin/g++
+Version: g++ (Debian 8.3.0-6) 8.3.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+CXXFLAGS: -O3 -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206
+
+CCAS: 
+Version: 
+CCASFLAGS: 
+
+LD: /usr/bin/ld
+Version: GNU ld (GNU Binutils for Debian) 2.31.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+Este programa é um software livre; você pode redistribuí-lo sob os termos
+da Licença Pública Geral GNU versão 3 ou (a seu critério) uma versão posterior.
+Esse programa possui absolutamente nenhuma garantia.
+LDFLAGS: -L/usr/lib64 -L/usr/lib
+
+JAVAC: /usr/bin/javac
+Version: 
+JFLAGS: 
+
+[EOF]
