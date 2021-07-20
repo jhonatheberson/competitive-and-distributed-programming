@@ -1,0 +1,322 @@
+
+./streamcluster 50 100 250 10000 1 10000 myin myout 2
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 82.98     16.75    16.75    24508     0.00     0.00  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+ 16.76     20.13     3.38   251412     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.30     20.19     0.06       14     0.00     0.00  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.00     20.19     0.00    19991     0.00     0.00  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.00     20.19     0.00    10001     0.00     0.00  contcenters(Points*)
+  0.00     20.19     0.00    10001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00     20.19     0.00    10001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00     20.19     0.00    10001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00     20.19     0.00    10000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00     20.19     0.00    10000     0.00     0.00  SimStream::feof()
+  0.00     20.19     0.00    10000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00     20.19     0.00    10000     0.00     0.00  SimStream::ferror()
+  0.00     20.19     0.00        9     0.00     2.18  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00     20.19     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00     20.19     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00     20.19     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+
+./streamcluster 50 100 250 5000 1 5000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 98.92     15.04    15.04    11048     0.00     0.00  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  1.12     15.21     0.17        7     0.02     0.02  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.00     15.21     0.00   109722     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.00     15.21     0.00     5001     0.00     0.00  contcenters(Points*)
+  0.00     15.21     0.00     5001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00     15.21     0.00     5001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00     15.21     0.00     5001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00     15.21     0.00     5001     0.00     0.00  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.00     15.21     0.00     5000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00     15.21     0.00     5000     0.00     0.00  SimStream::feof()
+  0.00     15.21     0.00     5000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00     15.21     0.00     5000     0.00     0.00  SimStream::ferror()
+  0.00     15.21     0.00        7     0.00     2.15  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00     15.21     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00     15.21     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00     15.21     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+./streamcluster 50 100 250 5000 2 5000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 98.81     15.34    15.34    11048     0.00     0.00  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  1.10     15.51     0.17        7     0.02     0.02  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.06     15.52     0.01   104722     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.06     15.53     0.01     2500     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00     15.53     0.00     2501     0.00     0.00  contcenters(Points*)
+  0.00     15.53     0.00     2501     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00     15.53     0.00     2501     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00     15.53     0.00     2501     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00     15.53     0.00     2501     0.00     0.01  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.00     15.53     0.00     2500     0.00     0.00  SimStream::feof()
+  0.00     15.53     0.00     2500     0.00     0.00  SimStream::read(float*, int, int)
+  0.00     15.53     0.00     2500     0.00     0.00  SimStream::ferror()
+  0.00     15.53     0.00        7     0.00     2.19  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00     15.53     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00     15.53     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00     15.53     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+./streamcluster 50 100 250 5000 20 5000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+100.04      0.62     0.62    11048     0.06     0.06  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  0.00      0.62     0.00   100222     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.00      0.62     0.00      251     0.00     0.00  contcenters(Points*)
+  0.00      0.62     0.00      251     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00      0.62     0.00      251     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00      0.62     0.00      251     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00      0.62     0.00      251     0.00     2.47  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.00      0.62     0.00      250     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00      0.62     0.00      250     0.00     0.00  SimStream::feof()
+  0.00      0.62     0.00      250     0.00     0.00  SimStream::read(float*, int, int)
+  0.00      0.62     0.00      250     0.00     0.00  SimStream::ferror()
+  0.00      0.62     0.00        7     0.00    88.60  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00      0.62     0.00        7     0.00     0.00  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.00      0.62     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00      0.62     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00      0.62     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+./streamcluster 2 3 250 5000 1 5000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 94.48      0.17     0.17      117     1.45     1.45  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  5.56      0.18     0.01        1    10.00    10.00  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.00      0.18     0.00    11106     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.00      0.18     0.00     5001     0.00     0.00  contcenters(Points*)
+  0.00      0.18     0.00     5001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00      0.18     0.00     5001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00      0.18     0.00     5001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00      0.18     0.00     5001     0.00     0.04  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.00      0.18     0.00     5000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00      0.18     0.00     5000     0.00     0.00  SimStream::feof()
+  0.00      0.18     0.00     5000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00      0.18     0.00     5000     0.00     0.00  SimStream::ferror()
+  0.00      0.18     0.00       12     0.00    14.17  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00      0.18     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00      0.18     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00      0.18     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+
+./streamcluster 2 3 30 5000 1 5000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+100.04      0.01     0.01       81     0.12     0.12  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  0.00      0.01     0.00    10772     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.00      0.01     0.00     5001     0.00     0.00  contcenters(Points*)
+  0.00      0.01     0.00     5001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00      0.01     0.00     5001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00      0.01     0.00     5001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00      0.01     0.00     5001     0.00     0.00  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.00      0.01     0.00     5000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00      0.01     0.00     5000     0.00     0.00  SimStream::feof()
+  0.00      0.01     0.00     5000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00      0.01     0.00     5000     0.00     0.00  SimStream::ferror()
+  0.00      0.01     0.00        8     0.00     1.25  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00      0.01     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00      0.01     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00      0.01     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+  0.00      0.01     0.00        1     0.00     0.00  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+
+
+./streamcluster 10 30 30 5000 1 5000 myin myout 8
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 99.64     12.65    12.65   228543     0.06     0.06  parsec_barrier_wait(parsec_barrier_t*)
+  0.32     12.69     0.04    15767     0.00     0.52  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  0.08     12.70     0.01     5001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00     12.70     0.00    40001     0.00     0.32  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.00     12.70     0.00     5001     0.00     0.00  contcenters(Points*)
+  0.00     12.70     0.00     5001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00     12.70     0.00     5001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00     12.70     0.00     5000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00     12.70     0.00     5000     0.00     0.00  SimStream::feof()
+  0.00     12.70     0.00     5000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00     12.70     0.00     5000     0.00     0.00  SimStream::ferror()
+  0.00     12.70     0.00       44     0.00   186.98  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00     12.70     0.00       39     0.00     0.93  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.00     12.70     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00     12.70     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00     12.70     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+./streamcluster 10 30 30 5000 1 5000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 50.02      0.01     0.01     5001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+ 50.02      0.02     0.01     2142     0.00     0.00  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  0.00      0.02     0.00    29388     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.00      0.02     0.00     5001     0.00     0.00  contcenters(Points*)
+  0.00      0.02     0.00     5001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00      0.02     0.00     5001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00      0.02     0.00     5001     0.00     0.00  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.00      0.02     0.00     5000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00      0.02     0.00     5000     0.00     0.00  SimStream::feof()
+  0.00      0.02     0.00     5000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00      0.02     0.00     5000     0.00     0.00  SimStream::ferror()
+  0.00      0.02     0.00        6     0.00     1.67  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00      0.02     0.00        5     0.00     0.00  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.00      0.02     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00      0.02     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00      0.02     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+
+./streamcluster 10 30 30 50000 1 50000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 84.81      0.39     0.39     2448     0.16     0.16  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  6.52      0.42     0.03        5     6.00     6.00  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  4.35      0.44     0.02    50001     0.00     0.00  localSearch(Points*, long, long, long*)
+  2.17      0.45     0.01    50001     0.00     0.01  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  2.17      0.46     0.01    50000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00      0.46     0.00   122133     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.00      0.46     0.00    50001     0.00     0.00  contcenters(Points*)
+  0.00      0.46     0.00    50001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00      0.46     0.00    50001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00      0.46     0.00    50000     0.00     0.00  SimStream::feof()
+  0.00      0.46     0.00    50000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00      0.46     0.00    50000     0.00     0.00  SimStream::ferror()
+  0.00      0.46     0.00        7     0.00    55.73  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00      0.46     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00      0.46     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00      0.46     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+./streamcluster 10 30 30 50000 1 50000 myin myout 8
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 92.85     45.79    45.79   967878     0.05     0.05  parsec_barrier_wait(parsec_barrier_t*)
+  6.71     49.10     3.31    17700     0.19     0.63  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  0.17     49.18     0.09   399815     0.00     0.12  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.10     49.23     0.05       39     1.28     1.97  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.08     49.27     0.04    50001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.04     49.29     0.02    50000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.03     49.31     0.02                             localSearchSub(void*)
+  0.02     49.32     0.01    50001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.02     49.33     0.01                             streamCluster(PStream*, long, long, int, long, long, char*)
+  0.00     49.33     0.00    50001     0.00     0.00  contcenters(Points*)
+  0.00     49.33     0.00    50001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00     49.33     0.00    50000     0.00     0.00  SimStream::feof()
+  0.00     49.33     0.00    50000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00     49.33     0.00    50000     0.00     0.00  SimStream::ferror()
+  0.00     49.33     0.00       50     0.00   224.79  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00     49.33     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00     49.33     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00     49.33     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+
+./streamcluster 10 30 40 100000 1 100000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 95.52      1.27     1.27     2448     0.52     0.52  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+  1.50      1.29     0.02        5     4.00     4.00  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.75      1.30     0.01   100001     0.00     0.00  contcenters(Points*)
+  0.75      1.31     0.01   100001     0.00     0.01  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.75      1.32     0.01   100000     0.00     0.00  SimStream::ferror()
+  0.75      1.33     0.01                             streamCluster(PStream*, long, long, int, long, long, char*)
+  0.00      1.33     0.00   222135     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.00      1.33     0.00   100001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.00      1.33     0.00   100001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00      1.33     0.00   100001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00      1.33     0.00   100000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00      1.33     0.00   100000     0.00     0.00  SimStream::feof()
+  0.00      1.33     0.00   100000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00      1.33     0.00        7     0.00   181.49  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00      1.33     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00      1.33     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00      1.33     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+./streamcluster 5 15 40 200000 1 200000 myin myout 1
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 77.36      0.58     0.58      968     0.60     0.60  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+ 10.67      0.66     0.08        3    26.68    26.68  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  3.33      0.69     0.03   200001     0.00     0.00  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  2.67      0.71     0.02   200001     0.00     0.00  contcenters(Points*)
+  1.33      0.72     0.01   200001     0.00     0.00  localSearch(Points*, long, long, long*)
+  1.33      0.73     0.01   200000     0.00     0.00  SimStream::read(float*, int, int)
+  1.33      0.74     0.01        1    10.00    10.00  outcenterIDs(Points*, long*, char*)
+  1.33      0.75     0.01                             streamCluster(PStream*, long, long, int, long, long, char*)
+  0.67      0.75     0.01                             localSearchSub(void*)
+  0.00      0.75     0.00   408773     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  0.00      0.75     0.00   200001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00      0.75     0.00   200001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00      0.75     0.00   200000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.00      0.75     0.00   200000     0.00     0.00  SimStream::feof()
+  0.00      0.75     0.00   200000     0.00     0.00  SimStream::ferror()
+  0.00      0.75     0.00        7     0.00    82.89  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00      0.75     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00      0.75     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+./streamcluster 10 20 40 200000 4 200000 myin myout 2
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 72.86     15.51    15.51     2411     0.01     0.01  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+ 24.63     20.75     5.24   220497     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  2.02     21.18     0.43       11     0.04     0.04  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.21     21.22     0.05    99948     0.00     0.00  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.09     21.24     0.02    50001     0.00     0.00  contcenters(Points*)
+  0.05     21.25     0.01    50001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.05     21.26     0.01    50000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.05     21.27     0.01    50000     0.00     0.00  SimStream::read(float*, int, int)
+  0.05     21.28     0.01        8     0.00     2.00  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.02     21.29     0.01                             localSearchSub(void*)
+  0.00     21.29     0.00    50001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00     21.29     0.00    50001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00     21.29     0.00    50000     0.00     0.00  SimStream::feof()
+  0.00     21.29     0.00    50000     0.00     0.00  SimStream::ferror()
+  0.00     21.29     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00     21.29     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00     21.29     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+./streamcluster 15 25 50 300000 6 300000 myin myout 4
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 66.36     34.53    34.53     6784     0.01     0.01  pgain(long, Points*, double, long*, int, parsec_barrier_t*)
+ 32.28     51.33    16.80   465193     0.00     0.00  parsec_barrier_wait(parsec_barrier_t*)
+  1.11     51.91     0.58       20     0.03     0.03  pspeedy(Points*, float, long*, int, parsec_barrier_t*)
+  0.12     51.97     0.06    50001     0.00     0.00  contcenters(Points*)
+  0.06     52.00     0.03   199936     0.00     0.00  pkmedian(Points*, long, long, long*, int, parsec_barrier_t*)
+  0.06     52.03     0.03    50001     0.00     0.00  localSearch(Points*, long, long, long*)
+  0.04     52.05     0.02    50000     0.00     0.00  copycenters(Points*, Points*, long*, long)
+  0.02     52.06     0.01                             streamCluster(PStream*, long, long, int, long, long, char*)
+  0.00     52.06     0.00    50001     0.00     0.00  parsec_barrier_init(parsec_barrier_t*, int const*, unsigned int)
+  0.00     52.06     0.00    50001     0.00     0.00  parsec_barrier_destroy(parsec_barrier_t*)
+  0.00     52.06     0.00    50000     0.00     0.00  SimStream::feof()
+  0.00     52.06     0.00    50000     0.00     0.00  SimStream::read(float*, int, int)
+  0.00     52.06     0.00    50000     0.00     0.00  SimStream::ferror()
+  0.00     52.06     0.00       24     0.00     1.54  pFL(Points*, int*, int, float, long*, double, long, float, int, parsec_barrier_t*)
+  0.00     52.06     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z11isIdenticalPfS_i
+  0.00     52.06     0.00        1     0.00     0.00  outcenterIDs(Points*, long*, char*)
+  0.00     52.06     0.00        1     0.00     0.00  selectfeasible_fast(Points*, int**, int, int, parsec_barrier_t*)
+
+
