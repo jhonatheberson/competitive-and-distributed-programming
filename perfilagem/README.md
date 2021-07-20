@@ -25,9 +25,10 @@ o **Flat profile:**, ele gera quanto tempo será executável para cada função
 
 
 **Call graph (explanation follows)** quais a chamadas para isso,
-e sequencia, também se utilizamos de **gprof2dot** para gerar um fluxograma do programa e suas chamadas
+e sequencia, também se utilizamos de [gprof2dot](https://github.com/jrfonseca/gprof2dot) para gerar um fluxograma do programa e suas chamadas
 
 ```
 gprof <executavel> | gprof2dot | dot -Tpng -o output.png 
 ```
 
+![output gprof2dot](https://github.com/jhonatheberson/competitive-and-distributed-programming/blob/master/perfilagem/output.png)
