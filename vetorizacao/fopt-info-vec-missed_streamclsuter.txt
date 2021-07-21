@@ -1,0 +1,1205 @@
+streamcluster.cpp:1970:24: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+         fprintf(stderr,"PARSEC Benchmark Suite Version "__PARSEC_XSTRING(PARSEC_VERSION)"\n");
+                        ^
+streamcluster.cpp:1775:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1778:17: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1781:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1766:25: note: not vectorized: control flow in loop.
+streamcluster.cpp:1766:25: note: bad loop form.
+streamcluster.cpp:1766:25: note: not vectorized: loop contains function calls or data references that cannot be analyzed
+streamcluster.cpp:1765:29: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1765:29: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1765:29: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1766:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1767:8: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1767:27: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1766:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1766:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1765:29: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1772:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1805:12: note: not consecutive access stderr.175_1 = stderr;
+streamcluster.cpp:1805:12: note: not consecutive access this_4(D)->D.45644._vptr.PStream = &MEM[(void *)&_ZTV10FileStream + 16B];
+streamcluster.cpp:1805:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1806:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1807:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1796:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1796:55: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1799:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1799:26: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1802:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1802:24: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1781:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1781:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1805:12: note: not consecutive access stderr.175_5 = stderr;
+streamcluster.cpp:1805:12: note: not consecutive access this_2(D)->D.45644._vptr.PStream = &MEM[(void *)&_ZTV10FileStream + 16B];
+streamcluster.cpp:1805:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1806:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1807:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1807:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:601:16: note: not vectorized: unsupported outerloop form.
+streamcluster.cpp:601:16: note: bad loop form.
+streamcluster.cpp:601:3: note: not vectorized: control flow in loop.
+streamcluster.cpp:601:3: note: bad loop form.
+streamcluster.cpp:595:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:602:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:601:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:602:5: note: not consecutive access _7 = *_6;
+streamcluster.cpp:602:5: note: not consecutive access _11 = *_10;
+streamcluster.cpp:602:5: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:603:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:605:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:626:13: note: not vectorized: number of iterations cannot be computed.
+streamcluster.cpp:626:13: note: bad loop form.
+streamcluster.cpp:626:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:627:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:626:13: note: not vectorized: no vectype for stmt: *_10 = MEM[(const struct Point &)_13];
+ scalar_type: const struct Point
+streamcluster.cpp:626:13: note: not vectorized: more than one data ref in stmt: *_10 = MEM[(const struct Point &)_13];
+streamcluster.cpp:626:13: note: not consecutive access temp$coord_23 = MEM[(const struct Point &)_10 + 8];
+streamcluster.cpp:626:13: note: not consecutive access temp$assign_24 = MEM[(const struct Point &)_10 + 16];
+streamcluster.cpp:626:13: note: not consecutive access _4 = points_18(D)->num;
+streamcluster.cpp:626:13: note: not consecutive access _7 = points_18(D)->p;
+streamcluster.cpp:626:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:632:1: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:639:13: note: not vectorized: loop contains function calls or data references that cannot be analyzed
+streamcluster.cpp:639:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:640:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:639:13: note: not consecutive access _11 = *_10;
+streamcluster.cpp:639:13: note: not consecutive access *_10 = temp_19;
+streamcluster.cpp:639:13: note: not consecutive access temp_19 = *_7;
+streamcluster.cpp:639:13: note: not consecutive access *_7 = _11;
+streamcluster.cpp:639:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:645:1: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: step unknown.
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:652:13: note: not consecutive access p1$coord_16 = MEM[(struct Point *)&p1 + 8B];
+streamcluster.cpp:652:13: note: not consecutive access p2$coord_14 = MEM[(struct Point *)&p2 + 8B];
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__4.241_44 = MEM[(float *)vectp_p1_coord.239_34];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__6.244_47 = MEM[(float *)vectp_p2_coord.242_45];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:653:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _7 = *_6;
+streamcluster.cpp:652:13: note: not consecutive access _5 = *_4;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _68 = *_67;
+streamcluster.cpp:652:13: note: not consecutive access _66 = *_65;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:3: note: not consecutive access _29 = *_30;
+streamcluster.cpp:652:3: note: not consecutive access _36 = *_37;
+streamcluster.cpp:652:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:654:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:818:25: note: step unknown.
+streamcluster.cpp:818:25: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:818:25: note: not ssa-name.
+streamcluster.cpp:818:25: note: use not simple.
+streamcluster.cpp:818:25: note: not ssa-name.
+streamcluster.cpp:818:25: note: use not simple.
+streamcluster.cpp:818:25: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:818:25: note: reduc op not supported by target.
+streamcluster.cpp:818:25: note: reduc op not supported by target.
+streamcluster.cpp:807:22: note: step unknown.
+streamcluster.cpp:807:22: note: vector alignment may not be reachable
+streamcluster.cpp:807:22: note: not ssa-name.
+streamcluster.cpp:807:22: note: use not simple.
+streamcluster.cpp:807:22: note: not ssa-name.
+streamcluster.cpp:807:22: note: use not simple.
+streamcluster.cpp:807:22: note: no array mode for V4SF[8]
+streamcluster.cpp:807:22: note: single-element interleaving not supported for not adjacent vector loads
+streamcluster.cpp:807:22: note: not falling back to elementwise accesses
+streamcluster.cpp:807:22: note: not vectorized: relevant stmt not supported: _71 = _70->cost;
+streamcluster.cpp:807:22: note: bad operation or unsupported loop bound.
+streamcluster.cpp:765:18: note: not vectorized: multiple nested loops.
+streamcluster.cpp:765:18: note: bad loop form.
+streamcluster.cpp:777:21: note: not vectorized: control flow in loop.
+streamcluster.cpp:777:21: note: bad loop form.
+streamcluster.cpp:652:13: note: step unknown.
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:748:7: note: not vectorized: multiple nested loops.
+streamcluster.cpp:748:7: note: bad loop form.
+streamcluster.cpp:749:26: note: not vectorized: control flow in loop.
+streamcluster.cpp:749:26: note: bad loop form.
+streamcluster.cpp:652:13: note: step unknown.
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:745:13: note: not vectorized: number of iterations cannot be computed.
+streamcluster.cpp:745:13: note: bad loop form.
+streamcluster.cpp:726:22: note: not vectorized: control flow in loop.
+streamcluster.cpp:726:22: note: bad loop form.
+streamcluster.cpp:652:13: note: step unknown.
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:706:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:712:3: note: not consecutive access nproc.9_2 = nproc;
+streamcluster.cpp:712:3: note: not consecutive access _1 = points_114(D)->num;
+streamcluster.cpp:712:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:711:8: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:726:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:732:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:727:48: note: not consecutive access _8 = points_114(D)->dim;
+streamcluster.cpp:727:48: note: not consecutive access _9 = points_114(D)->p;
+streamcluster.cpp:727:48: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access p1$8_141 = MEM[(const struct Point &)_13 + 8];
+streamcluster.cpp:652:13: note: not consecutive access p2$8_161 = MEM[(const struct Point &)_9 + 8];
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__176.313_226 = MEM[(float *)vectp_p1_8.311_229];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__178.316_217 = MEM[(float *)vectp_p2_8.314_219];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:653:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _385 = *_384;
+streamcluster.cpp:652:13: note: not consecutive access _367 = *_371;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _147 = *_10;
+streamcluster.cpp:652:13: note: not consecutive access _391 = *_64;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:3: note: not consecutive access _279 = *_280;
+streamcluster.cpp:652:3: note: not consecutive access _277 = *_278;
+streamcluster.cpp:652:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:726:22: note: not consecutive access _14 = _13->weight;
+streamcluster.cpp:726:22: note: not consecutive access _13->cost = _15;
+streamcluster.cpp:726:22: note: not consecutive access _13->assign = 0;
+streamcluster.cpp:726:22: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:734:28: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:738:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:765:18: note: not consecutive access i = 1;
+streamcluster.cpp:765:18: note: not consecutive access _236 = points_114(D)->num;
+streamcluster.cpp:765:18: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:794:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:798:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:799:27: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:803:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:807:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:744:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:745:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:746:27: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:748:7: note: not consecutive access i.13_20 = i;
+streamcluster.cpp:748:7: note: not consecutive access _22 = points_114(D)->num;
+streamcluster.cpp:748:7: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:745:37: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:745:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:749:26: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:759:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:760:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:751:37: note: not consecutive access _24 = points_114(D)->dim;
+streamcluster.cpp:751:37: note: not consecutive access _25 = points_114(D)->p;
+streamcluster.cpp:751:37: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access p1$8_209 = MEM[(const struct Point &)_31 + 8];
+streamcluster.cpp:652:13: note: not consecutive access p2$8_210 = MEM[(const struct Point &)_28 + 8];
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__188.300_301 = MEM[(float *)vectp_p1_8.298_303];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__190.303_298 = MEM[(float *)vectp_p2_8.301_300];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:653:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _186 = *_185;
+streamcluster.cpp:652:13: note: not consecutive access _188 = *_187;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _256 = *_422;
+streamcluster.cpp:652:13: note: not consecutive access _92 = *_93;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:3: note: not consecutive access _319 = *_320;
+streamcluster.cpp:652:3: note: not consecutive access _317 = *_318;
+streamcluster.cpp:652:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:752:4: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:755:27: note: not consecutive access _28->cost = _33;
+streamcluster.cpp:755:27: note: not consecutive access _28->assign = _21;
+streamcluster.cpp:755:27: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:749:26: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:766:37: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:767:7: note: not consecutive access _46 = _45->cost;
+streamcluster.cpp:767:7: note: not consecutive access i.17_42 = i;
+streamcluster.cpp:767:7: note: not consecutive access _41 = points_114(D)->p;
+streamcluster.cpp:767:7: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:770:20: note: not consecutive access _48 = *kcenter_125(D);
+streamcluster.cpp:770:20: note: not consecutive access *kcenter_125(D) = _49;
+streamcluster.cpp:770:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:774:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:775:24: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:777:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:785:2: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:789:2: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:789:2: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:781:25: note: not consecutive access i.18_56 = i;
+streamcluster.cpp:781:25: note: not consecutive access _51 = points_114(D)->dim;
+streamcluster.cpp:781:25: note: not consecutive access _52 = points_114(D)->p;
+streamcluster.cpp:781:25: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access p1$8_213 = MEM[(const struct Point &)_59 + 8];
+streamcluster.cpp:652:13: note: not consecutive access p2$8_214 = MEM[(const struct Point &)_55 + 8];
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__200.287_341 = MEM[(float *)vectp_p1_8.285_343];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__202.290_338 = MEM[(float *)vectp_p2_8.288_340];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:653:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _173 = *_259;
+streamcluster.cpp:652:13: note: not consecutive access _175 = *_174;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _86 = *_85;
+streamcluster.cpp:652:13: note: not consecutive access _197 = *_169;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:3: note: not consecutive access _366 = *_372;
+streamcluster.cpp:652:3: note: not consecutive access _364 = *_365;
+streamcluster.cpp:652:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:779:4: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:781:25: note: not consecutive access _55->cost = _61;
+streamcluster.cpp:781:25: note: not consecutive access _55->assign = _63;
+streamcluster.cpp:781:25: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:777:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:765:18: note: not consecutive access i = _65;
+streamcluster.cpp:765:18: note: not consecutive access _37 = points_114(D)->num;
+streamcluster.cpp:765:18: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:808:24: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:807:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:812:3: note: not consecutive access *_76 = mytotal_252;
+streamcluster.cpp:812:3: note: not consecutive access costs.21_73 = costs;
+streamcluster.cpp:812:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:815:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:818:25: note: not consecutive access nproc.22_5 = nproc;
+streamcluster.cpp:818:25: note: not consecutive access totalcost = _80;
+streamcluster.cpp:818:25: note: not consecutive access pretmp_382 = costs;
+streamcluster.cpp:818:25: note: not consecutive access _77 = *kcenter_125(D);
+streamcluster.cpp:818:25: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:818:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:818:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:820:14: note: not vectorized: no vectype for stmt: vect__86.279_389 = MEM[(double *)vectp_pretmp.277_395];
+ scalar_type: vector(2) double
+streamcluster.cpp:820:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:820:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:818:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:818:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:822:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:825:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:828:19: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:738:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:738:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:812:3: note: not consecutive access *_96 = 0.0;
+streamcluster.cpp:812:3: note: not consecutive access costs.21_97 = costs;
+streamcluster.cpp:812:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:812:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:803:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:807:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:812:3: note: not consecutive access *_234 = 0.0;
+streamcluster.cpp:812:3: note: not consecutive access costs.21_196 = costs;
+streamcluster.cpp:812:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:812:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1132:24: note: not vectorized: control flow in loop.
+streamcluster.cpp:1132:24: note: bad loop form.
+streamcluster.cpp:1122:25: note: not vectorized: control flow in loop.
+streamcluster.cpp:1122:25: note: bad loop form.
+streamcluster.cpp:652:13: note: step unknown.
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:1109:23: note: step unknown.
+streamcluster.cpp:1109:23: note: step unknown.
+streamcluster.cpp:1109:23: note: Build SLP failed: different types
+streamcluster.cpp:1109:23: note: Unknown alignment for access: *_145
+streamcluster.cpp:1109:23: note: Unknown alignment for access: *_152
+streamcluster.cpp:1109:23: note: not ssa-name.
+streamcluster.cpp:1109:23: note: use not simple.
+streamcluster.cpp:1109:23: note: not ssa-name.
+streamcluster.cpp:1109:23: note: use not simple.
+streamcluster.cpp:1109:23: note: can't use a fully-masked loop because an access isn't contiguous.
+streamcluster.cpp:1109:23: note: reduc op not supported by target.
+streamcluster.cpp:1109:23: note: not ssa-name.
+streamcluster.cpp:1109:23: note: use not simple.
+streamcluster.cpp:1109:23: note: not ssa-name.
+streamcluster.cpp:1109:23: note: use not simple.
+streamcluster.cpp:1109:23: note: reduc op not supported by target.
+streamcluster.cpp:1109:23: note: multiple types in double reduction or condition reduction.
+streamcluster.cpp:1109:23: note: not vectorized: relevant stmt not supported: _155 = _153 + gl_cost_of_opening_x_lsm.445_340;
+streamcluster.cpp:1109:23: note: bad operation or unsupported loop bound.
+streamcluster.cpp:1079:23: note: not vectorized: control flow in loop.
+streamcluster.cpp:1079:23: note: bad loop form.
+streamcluster.cpp:1083:25: note: step unknown.
+streamcluster.cpp:1083:25: note: Unknown alignment for access: *_121
+streamcluster.cpp:1083:25: note: not ssa-name.
+streamcluster.cpp:1083:25: note: use not simple.
+streamcluster.cpp:1083:25: note: not ssa-name.
+streamcluster.cpp:1083:25: note: use not simple.
+streamcluster.cpp:1083:25: note: can't use a fully-masked loop because an access isn't contiguous.
+streamcluster.cpp:1083:25: note: reduc op not supported by target.
+streamcluster.cpp:1083:25: note: cost model: the vector iteration cost = 56 divided by the scalar iteration cost = 16 is greater or equal to the vectorization factor = 2.
+streamcluster.cpp:1083:25: note: not vectorized: vectorization not profitable.
+streamcluster.cpp:1083:25: note: not vectorized: vector version will never be profitable.
+streamcluster.cpp:1044:19: note: not vectorized: control flow in loop.
+streamcluster.cpp:1044:19: note: bad loop form.
+streamcluster.cpp:652:13: note: step unknown.
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:1024:22: note: not vectorized: control flow in loop.
+streamcluster.cpp:1024:22: note: bad loop form.
+streamcluster.cpp:1013:23: note: step unknown.
+streamcluster.cpp:1013:23: note: reduction value used in loop.
+streamcluster.cpp:1013:23: note: Unknown def-use cycle pattern.
+streamcluster.cpp:1013:23: note: Unsupported pattern.
+streamcluster.cpp:1013:23: note: not vectorized: unsupported use in stmt.
+streamcluster.cpp:1013:23: note: unexpected pattern.
+streamcluster.cpp:1000:22: note: not vectorized: control flow in loop.
+streamcluster.cpp:1000:22: note: bad loop form.
+streamcluster.cpp:956:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:963:3: note: not consecutive access nproc.27_2 = nproc;
+streamcluster.cpp:963:3: note: not consecutive access _1 = points_252(D)->num;
+streamcluster.cpp:963:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:962:8: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:962:8: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:976:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:977:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:984:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:985:32: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:991:3: note: not consecutive access work_mem = _18;
+streamcluster.cpp:991:3: note: not consecutive access gl_cost_of_opening_x = 0.0;
+streamcluster.cpp:991:3: note: not consecutive access gl_number_of_centers_to_close = 0;
+streamcluster.cpp:991:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1000:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1002:21: note: not consecutive access is_center.30_20 = is_center;
+streamcluster.cpp:1002:21: note: not consecutive access center_table.32_25 = center_table;
+streamcluster.cpp:1002:21: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:991:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1000:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1001:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1002:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1000:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1000:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1008:3: note: not consecutive access *_33 = prephitmp_753;
+streamcluster.cpp:1008:3: note: not consecutive access work_mem.33_29 = work_mem;
+streamcluster.cpp:1008:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1011:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1013:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1014:39: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1013:23: note: not consecutive access _41 = *_40;
+streamcluster.cpp:1013:23: note: not consecutive access *_40 = _45;
+streamcluster.cpp:1013:23: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1021:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1024:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1026:50: note: not consecutive access is_center.37_47 = is_center;
+streamcluster.cpp:1026:50: note: not consecutive access center_table.38_51 = center_table;
+streamcluster.cpp:1026:50: note: not consecutive access work_mem.39_55 = work_mem;
+streamcluster.cpp:1026:50: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1025:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1026:23: note: not consecutive access _54 = *_53;
+streamcluster.cpp:1026:23: note: not consecutive access *_53 = _59;
+streamcluster.cpp:1026:23: note: not consecutive access _57 = *_56;
+streamcluster.cpp:1026:23: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1024:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1024:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1031:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1032:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1033:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1033:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1036:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1044:19: note: not consecutive access nproc.48_75 = nproc;
+streamcluster.cpp:1044:19: note: not consecutive access work_mem.46_74 = work_mem;
+streamcluster.cpp:1044:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1055:26: note: not consecutive access p2$8_258 = MEM[(const struct Point &)_84 + 8];
+streamcluster.cpp:1055:26: note: not consecutive access switch_membership.50_89 = switch_membership;
+streamcluster.cpp:1055:26: note: not consecutive access center_table.51_94 = center_table;
+streamcluster.cpp:1055:26: note: not consecutive access _80 = points_252(D)->dim;
+streamcluster.cpp:1055:26: note: not consecutive access _81 = points_252(D)->p;
+streamcluster.cpp:1055:26: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__332.465_657 = MEM[(float *)vectp_p1_8.463_659];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__334.468_654 = MEM[(float *)vectp_p2_8.466_656];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:653:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _623 = *_624;
+streamcluster.cpp:652:13: note: not consecutive access _625 = *_626;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _611 = *_612;
+streamcluster.cpp:652:13: note: not consecutive access _613 = *_614;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:3: note: not consecutive access _683 = *_684;
+streamcluster.cpp:652:3: note: not consecutive access _685 = *_686;
+streamcluster.cpp:652:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1049:5: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1056:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1068:35: note: not consecutive access _98 = *_97;
+streamcluster.cpp:1068:35: note: not consecutive access _102 = *_101;
+streamcluster.cpp:1068:35: note: not consecutive access *_101 = _105;
+streamcluster.cpp:1068:35: note: not consecutive access _93 = _87->assign;
+streamcluster.cpp:1068:35: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1044:19: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1080:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1083:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1083:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1087:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1093:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1079:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1079:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1106:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1109:23: note: not consecutive access nproc.60_247 = nproc;
+streamcluster.cpp:1109:23: note: not consecutive access gl_cost_of_opening_x = z_300(D);
+streamcluster.cpp:1109:23: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1110:66: note: not consecutive access work_mem.61_140 = work_mem;
+streamcluster.cpp:1110:66: note: not consecutive access gl_number_of_centers_to_close_lsm.444_35 = gl_number_of_centers_to_close;
+streamcluster.cpp:1110:66: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1109:23: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1128:34: note: not consecutive access switch_membership.67_172 = switch_membership;
+streamcluster.cpp:1128:34: note: not consecutive access center_table.66_158 = center_table;
+streamcluster.cpp:1128:34: note: not consecutive access _159 = points_252(D)->p;
+streamcluster.cpp:1128:34: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1124:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1124:33: note: not consecutive access _167 = *_166;
+streamcluster.cpp:1124:33: note: not consecutive access _171 = *_170;
+streamcluster.cpp:1124:33: note: not consecutive access _163 = _162->assign;
+streamcluster.cpp:1124:33: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access p2$8_277 = MEM[(const struct Point &)_179 + 8];
+streamcluster.cpp:652:13: note: not consecutive access _175 = _162->weight;
+streamcluster.cpp:652:13: note: not consecutive access p1$8_270 = MEM[(const struct Point &)_162 + 8];
+streamcluster.cpp:652:13: note: not consecutive access _176 = points_252(D)->dim;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__344.452_712 = MEM[(float *)vectp_p1_8.450_714];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__346.455_709 = MEM[(float *)vectp_p2_8.453_711];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:653:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _332 = *_331;
+streamcluster.cpp:652:13: note: not consecutive access _334 = *_333;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _347 = *_346;
+streamcluster.cpp:652:13: note: not consecutive access _351 = *_348;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:3: note: not consecutive access _747 = *_746;
+streamcluster.cpp:652:3: note: not consecutive access _735 = *_736;
+streamcluster.cpp:652:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1129:22: note: not consecutive access _162->cost = _180;
+streamcluster.cpp:1129:22: note: not consecutive access _162->assign = x_291(D);
+streamcluster.cpp:1129:22: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1122:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1133:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1133:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1133:24: note: not consecutive access _189 = *_188;
+streamcluster.cpp:1133:24: note: not consecutive access _193 = *_192;
+streamcluster.cpp:1133:24: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1134:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1132:24: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1137:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1138:20: note: not consecutive access *_199 = 1;
+streamcluster.cpp:1138:20: note: not consecutive access is_center.72_197 = is_center;
+streamcluster.cpp:1138:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1141:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1142:19: note: not consecutive access gl_number_of_centers_to_close.74_202 = gl_number_of_centers_to_close;
+streamcluster.cpp:1142:19: note: not consecutive access _200 = *numcenters_259(D);
+streamcluster.cpp:1142:19: note: not consecutive access *numcenters_259(D) = _204;
+streamcluster.cpp:1142:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1147:28: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1160:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1150:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1153:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1150:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1150:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1150:3: note: not consecutive access gl_cost_of_opening_x = _372;
+streamcluster.cpp:1150:3: note: not consecutive access gl_number_of_centers_to_close = _373;
+streamcluster.cpp:1150:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1115:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1120:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1122:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1115:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1120:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1073:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1073:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1073:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1084:32: note: not consecutive access is_center.53_107 = is_center;
+streamcluster.cpp:1084:32: note: not consecutive access center_table.56_113 = center_table;
+streamcluster.cpp:1084:32: note: not consecutive access nproc.54_384 = nproc;
+streamcluster.cpp:1084:32: note: not consecutive access work_mem.55_112 = work_mem;
+streamcluster.cpp:1084:32: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1031:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1032:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1032:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1021:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1024:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1008:3: note: not consecutive access *_387 = 0.0;
+streamcluster.cpp:1008:3: note: not consecutive access work_mem.33_337 = work_mem;
+streamcluster.cpp:1008:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1008:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1222:22: note: not vectorized: multiple nested loops.
+streamcluster.cpp:1222:22: note: bad loop form.
+streamcluster.cpp:1233:15: note: not vectorized: loop contains function calls or data references that cannot be analyzed
+streamcluster.cpp:639:13: note: not vectorized: loop contains function calls or data references that cannot be analyzed
+streamcluster.cpp:1212:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1222:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:639:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1227:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1231:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1233:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:639:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:640:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:639:13: note: not consecutive access _54 = *_53;
+streamcluster.cpp:639:13: note: not consecutive access *_53 = temp_50;
+streamcluster.cpp:639:13: note: not consecutive access temp_50 = *_49;
+streamcluster.cpp:639:13: note: not consecutive access *_49 = _54;
+streamcluster.cpp:639:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:639:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1235:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1233:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1233:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1239:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1222:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1242:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:1281:20: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:1298:18: note: not vectorized: multiple nested loops.
+streamcluster.cpp:1298:18: note: bad loop form.
+streamcluster.cpp:1307:5: note: not vectorized: control flow in loop.
+streamcluster.cpp:1307:5: note: bad loop form.
+streamcluster.cpp:1308:9: note: not vectorized: control flow in loop.
+streamcluster.cpp:1308:9: note: bad loop form.
+streamcluster.cpp:1293:21: note: not vectorized, possible dependence between data-refs streamcluster.cpp:1293:21: note: bad data dependence.
+streamcluster.cpp:1256:35: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1256:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1257:38: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1257:17: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1258:28: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1280:3: note: not consecutive access _16 = points_71(D)->num;
+streamcluster.cpp:1280:3: note: not consecutive access *feasible_78(D) = _14;
+streamcluster.cpp:1280:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1282:22: note: not vectorized: no vectype for stmt: MEM[(int *)vectp.602_61] = vect_vec_iv_.601_63;
+ scalar_type: vector(4) int
+streamcluster.cpp:1282:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1282:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1288:30: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1293:21: note: not consecutive access _23 = _22->weight;
+streamcluster.cpp:1293:21: note: not consecutive access _22 = points_71(D)->p;
+streamcluster.cpp:1293:21: note: not consecutive access *accumweight_84 = _23;
+streamcluster.cpp:1293:21: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1298:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1298:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1293:21: note: not consecutive access *_33 = _34;
+streamcluster.cpp:1293:21: note: not consecutive access _32 = _31->weight;
+streamcluster.cpp:1293:21: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1322:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1322:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1322:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1299:17: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1303:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1304:21: note: not consecutive access *_47 = 0;
+streamcluster.cpp:1304:21: note: not consecutive access _44 = *feasible_78(D);
+streamcluster.cpp:1304:21: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1302:6: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1307:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1309:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1309:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1307:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1316:19: note: not consecutive access *_57 = r_110;
+streamcluster.cpp:1316:19: note: not consecutive access _54 = *feasible_78(D);
+streamcluster.cpp:1316:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1298:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1298:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1525:23: note: not consecutive access _34->cost = 0.0;
+streamcluster.cpp:1525:23: note: not consecutive access _34->assign = kk_385;
+streamcluster.cpp:1525:23: note: can't use a fully-masked loop because an access isn't contiguous.
+streamcluster.cpp:1525:23: note: cost model: the vector iteration cost = 136 divided by the scalar iteration cost = 24 is greater or equal to the vectorization factor = 4.
+streamcluster.cpp:1525:23: note: not vectorized: vectorization not profitable.
+streamcluster.cpp:1525:23: note: not vectorized: vector version will never be profitable.
+streamcluster.cpp:1572:3: note: not vectorized: control flow in loop.
+streamcluster.cpp:1572:3: note: bad loop form.
+streamcluster.cpp:1563:24: note: not vectorized: not suitable for scatter store *_56 = 1;
+streamcluster.cpp:1563:24: note: bad data references.
+streamcluster.cpp:1281:20: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:1281:20: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:1298:18: note: not vectorized: multiple nested loops.
+streamcluster.cpp:1298:18: note: bad loop form.
+streamcluster.cpp:1307:5: note: not vectorized: control flow in loop.
+streamcluster.cpp:1307:5: note: bad loop form.
+streamcluster.cpp:1308:9: note: not vectorized: control flow in loop.
+streamcluster.cpp:1308:9: note: bad loop form.
+streamcluster.cpp:1293:21: note: not vectorized, possible dependence between data-refs streamcluster.cpp:1293:21: note: bad data dependence.
+streamcluster.cpp:1549:19: note: not vectorized: control flow in loop.
+streamcluster.cpp:1549:19: note: bad loop form.
+streamcluster.cpp:626:13: note: not vectorized: number of iterations cannot be computed.
+streamcluster.cpp:626:13: note: bad loop form.
+streamcluster.cpp:626:13: note: not vectorized: number of iterations cannot be computed.
+streamcluster.cpp:626:13: note: bad loop form.
+streamcluster.cpp:1517:21: note: step unknown.
+streamcluster.cpp:1517:21: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:1517:21: note: not ssa-name.
+streamcluster.cpp:1517:21: note: use not simple.
+streamcluster.cpp:1517:21: note: not ssa-name.
+streamcluster.cpp:1517:21: note: use not simple.
+streamcluster.cpp:1517:21: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:1517:21: note: reduc op not supported by target.
+streamcluster.cpp:1517:21: note: reduc op not supported by target.
+streamcluster.cpp:1507:22: note: not vectorized: control flow in loop.
+streamcluster.cpp:1507:22: note: bad loop form.
+streamcluster.cpp:652:13: note: step unknown.
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: not ssa-name.
+streamcluster.cpp:652:13: note: use not simple.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:652:13: note: reduc op not supported by target.
+streamcluster.cpp:1491:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1491:38: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1491:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1500:3: note: not consecutive access _4 = points_141(D)->dim;
+streamcluster.cpp:1500:3: note: not consecutive access numberOfPoints_142 = points_141(D)->num;
+streamcluster.cpp:1500:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1499:8: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1503:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1507:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1508:42: note: not consecutive access p2$8_140 = MEM[(const struct Point &)_11 + 8];
+streamcluster.cpp:1508:42: note: not consecutive access _11 = points_141(D)->p;
+streamcluster.cpp:1508:42: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__203.677_312 = MEM[(float *)vectp_p1_8.675_329];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no vectype for stmt: vect__205.680_272 = MEM[(float *)vectp_p2_8.678_298];
+ scalar_type: vector(4) float
+streamcluster.cpp:653:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:653:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _393 = *_276;
+streamcluster.cpp:652:13: note: not consecutive access _535 = *_96;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:13: note: not consecutive access _124 = *_126;
+streamcluster.cpp:652:13: note: not consecutive access _122 = *_123;
+streamcluster.cpp:652:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:652:3: note: not consecutive access _387 = *_388;
+streamcluster.cpp:652:3: note: not consecutive access _384 = *_386;
+streamcluster.cpp:652:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1507:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1514:3: note: not consecutive access *_22 = myhiz_394;
+streamcluster.cpp:1514:3: note: not consecutive access hizs.87_19 = hizs;
+streamcluster.cpp:1514:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1517:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1518:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1518:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1518:9: note: not vectorized: no vectype for stmt: vect__28.669_418 = MEM[(double *)vectp_hizs.667_426];
+ scalar_type: vector(2) double
+streamcluster.cpp:1518:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1518:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1517:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1517:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1523:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1525:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1530:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1526:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1525:23: note: not consecutive access _34->cost = 0.0;
+streamcluster.cpp:1525:23: note: not consecutive access _34->assign = kk_385;
+streamcluster.cpp:1525:23: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1531:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1532:15: note: not consecutive access k.93_36 = k;
+streamcluster.cpp:1532:15: note: not consecutive access *kfinal_165(D) = k.93_36;
+streamcluster.cpp:1532:15: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1537:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1538:17: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1542:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:626:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:627:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:626:13: note: not vectorized: no vectype for stmt: *_226 = MEM[(const struct Point &)_233];
+ scalar_type: const struct Point
+streamcluster.cpp:626:13: note: not vectorized: more than one data ref in stmt: *_226 = MEM[(const struct Point &)_233];
+streamcluster.cpp:626:13: note: not consecutive access temp$coord_228 = MEM[(const struct Point &)_226 + 8];
+streamcluster.cpp:626:13: note: not consecutive access temp$assign_229 = MEM[(const struct Point &)_226 + 16];
+streamcluster.cpp:626:13: note: not consecutive access _219 = points_141(D)->num;
+streamcluster.cpp:626:13: note: not consecutive access _223 = points_141(D)->p;
+streamcluster.cpp:626:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1543:19: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1548:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1543:10: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1550:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:626:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:627:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:626:13: note: not vectorized: no vectype for stmt: *_246 = MEM[(const struct Point &)_253];
+ scalar_type: const struct Point
+streamcluster.cpp:626:13: note: not vectorized: more than one data ref in stmt: *_246 = MEM[(const struct Point &)_253];
+streamcluster.cpp:626:13: note: not consecutive access temp$coord_248 = MEM[(const struct Point &)_246 + 8];
+streamcluster.cpp:626:13: note: not consecutive access temp$assign_249 = MEM[(const struct Point &)_246 + 16];
+streamcluster.cpp:626:13: note: not consecutive access _239 = points_141(D)->num;
+streamcluster.cpp:626:13: note: not consecutive access _243 = points_141(D)->p;
+streamcluster.cpp:626:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:626:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1538:8: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1560:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1256:35: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1256:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1257:38: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1257:17: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1258:28: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1280:3: note: not consecutive access feasible = _269;
+streamcluster.cpp:1280:3: note: not consecutive access _271 = points_141(D)->num;
+streamcluster.cpp:1280:3: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1282:22: note: not vectorized: no vectype for stmt: MEM[(int *)vectp.661_472] = vect_vec_iv_.660_474;
+ scalar_type: vector(4) int
+streamcluster.cpp:1282:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1282:22: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1281:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1288:30: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1293:21: note: not consecutive access _280 = points_141(D)->p;
+streamcluster.cpp:1293:21: note: not consecutive access *accumweight_279 = _281;
+streamcluster.cpp:1293:21: note: not consecutive access _281 = _280->weight;
+streamcluster.cpp:1293:21: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1298:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1298:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1293:21: note: not consecutive access *_292 = _293;
+streamcluster.cpp:1293:21: note: not consecutive access _291 = _290->weight;
+streamcluster.cpp:1293:21: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1293:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1299:17: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1303:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1304:21: note: not consecutive access *_311 = 0;
+streamcluster.cpp:1304:21: note: not consecutive access _308 = feasible;
+streamcluster.cpp:1304:21: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1302:6: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1307:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1309:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1309:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1307:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1316:19: note: not consecutive access *_324 = r_553;
+streamcluster.cpp:1316:19: note: not consecutive access _321 = feasible;
+streamcluster.cpp:1316:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1298:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1322:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1322:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1563:24: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1564:20: note: not consecutive access is_center.96_49 = is_center;
+streamcluster.cpp:1564:20: note: not consecutive access _50 = points_141(D)->p;
+streamcluster.cpp:1564:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1563:24: note: not consecutive access _54 = _53->assign;
+streamcluster.cpp:1563:24: note: not consecutive access *_56 = 1;
+streamcluster.cpp:1563:24: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1569:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1576:38: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1576:42: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1575:15: note: not consecutive access feasible.98_65 = feasible;
+streamcluster.cpp:1575:15: note: not consecutive access numfeasible.97_64 = numfeasible;
+streamcluster.cpp:1575:15: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1579:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1579:27: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1579:47: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1580:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1585:37: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1584:17: note: not consecutive access feasible.104_78 = feasible;
+streamcluster.cpp:1584:17: note: not consecutive access numfeasible.103_77 = numfeasible;
+streamcluster.cpp:1584:17: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1584:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1588:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1594:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1598:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1603:35: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1608:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1613:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1614:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1615:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1616:13: note: not consecutive access k.113_92 = k;
+streamcluster.cpp:1616:13: note: not consecutive access *kfinal_165(D) = k.113_92;
+streamcluster.cpp:1616:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1619:10: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1619:10: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1594:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1594:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1551:19: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1548:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1551:10: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1551:19: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1548:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1551:10: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1693:11: note: not consecutive access _2 = MEM[(struct pkmedian_arg_t *)arg__7(D)].pid;
+streamcluster.cpp:1693:11: note: not consecutive access _6 = MEM[(struct pkmedian_arg_t *)arg__7(D)].points;
+streamcluster.cpp:1693:11: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1695:10: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1633:13: note: not vectorized: control flow in loop.
+streamcluster.cpp:1633:13: note: bad loop form.
+
+
+streamcluster.cpp:1638:19: note: versioning for alias required: can't determine dependence between *_17 and *_25
+
+streamcluster.cpp:1638:19: note: versioning for alias required: can't determine dependence between *_25 and *_17
+streamcluster.cpp:1638:19: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:1638:19: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:1638:19: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:1638:19: note: Unknown misalignment, naturally aligned
+streamcluster.cpp:1638:19: note: not ssa-name.
+streamcluster.cpp:1638:19: note: use not simple.
+streamcluster.cpp:1638:19: note: not ssa-name.
+streamcluster.cpp:1638:19: note: use not simple.
+streamcluster.cpp:1638:19: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+streamcluster.cpp:1638:19: note: not ssa-name.
+streamcluster.cpp:1638:19: note: use not simple.
+streamcluster.cpp:1638:19: note: not ssa-name.
+streamcluster.cpp:1638:19: note: use not simple.
+streamcluster.cpp:1633:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1647:10: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1635:17: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1635:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1638:19: note: not consecutive access _10 = _9->weight;
+streamcluster.cpp:1638:19: note: not consecutive access _11 = _5->weight;
+streamcluster.cpp:1638:19: note: not consecutive access _52 = points_38(D)->dim;
+streamcluster.cpp:1638:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1641:17: note: not consecutive access _14 = _9->coord;
+streamcluster.cpp:1641:17: note: not consecutive access _24 = _5->coord;
+streamcluster.cpp:1641:17: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1641:17: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1640:42: note: not vectorized: no vectype for stmt: vect__18.816_100 = MEM[(float *)vectp.814_98];
+ scalar_type: vector(4) float
+streamcluster.cpp:1640:42: note: not vectorized: no vectype for stmt: MEM[(float *)vectp.820_107] = vect__23.819_106;
+ scalar_type: vector(4) float
+streamcluster.cpp:1640:42: note: not vectorized: no vectype for stmt: vect__26.824_112 = MEM[(float *)vectp.822_110];
+ scalar_type: vector(4) float
+streamcluster.cpp:1640:42: note: not vectorized: no vectype for stmt: MEM[(float *)vectp.827_116] = vect__28.826_115;
+ scalar_type: vector(4) float
+streamcluster.cpp:1640:42: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1640:42: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1638:19: note: not consecutive access _18 = *_17;
+streamcluster.cpp:1638:19: note: not consecutive access *_17 = _23;
+streamcluster.cpp:1638:19: note: not consecutive access *_17 = _43;
+streamcluster.cpp:1638:19: note: not consecutive access _27 = *_26;
+streamcluster.cpp:1638:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1638:19: note: not consecutive access _125 = *_124;
+streamcluster.cpp:1638:19: note: not consecutive access *_124 = _128;
+streamcluster.cpp:1638:19: note: not consecutive access *_124 = _133;
+streamcluster.cpp:1638:19: note: not consecutive access _131 = *_130;
+streamcluster.cpp:1638:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1638:7: note: not consecutive access _91 = *_93;
+streamcluster.cpp:1638:7: note: not consecutive access *_93 = _83;
+streamcluster.cpp:1638:7: note: not consecutive access *_93 = _65;
+streamcluster.cpp:1638:7: note: not consecutive access _67 = *_84;
+streamcluster.cpp:1638:7: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1638:19: note: not consecutive access _69 = *_70;
+streamcluster.cpp:1638:19: note: not consecutive access *_70 = _62;
+streamcluster.cpp:1638:19: note: not consecutive access *_70 = _51;
+streamcluster.cpp:1638:19: note: not consecutive access _59 = *_60;
+streamcluster.cpp:1638:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1638:19: note: not consecutive access pretmp_90 = _9->weight;
+streamcluster.cpp:1638:19: note: not consecutive access pretmp_92 = _5->weight;
+streamcluster.cpp:1638:19: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1643:45: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1633:13: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1666:18: note: not vectorized: control flow in loop.
+streamcluster.cpp:1666:18: note: bad loop form.
+streamcluster.cpp:1659:18: note: not vectorized: not suitable for scatter store *_10 = 1;
+streamcluster.cpp:1659:18: note: bad data references.
+streamcluster.cpp:1656:38: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1659:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1660:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1659:18: note: not consecutive access _8 = _7->assign;
+streamcluster.cpp:1659:18: note: not consecutive access *_10 = 1;
+streamcluster.cpp:1659:18: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1667:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1668:13: note: not consecutive access _21 = _20->coord;
+streamcluster.cpp:1668:13: note: not consecutive access _26 = _25->coord;
+streamcluster.cpp:1668:13: note: not consecutive access _15 = points_43(D)->dim;
+streamcluster.cpp:1668:13: note: not consecutive access _18 = points_43(D)->p;
+streamcluster.cpp:1668:13: note: not consecutive access _22 = centers_48(D)->p;
+streamcluster.cpp:1668:13: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1671:8: note: not consecutive access *_33 = _34;
+streamcluster.cpp:1671:8: note: not consecutive access _31 = _28->weight;
+streamcluster.cpp:1671:8: note: not consecutive access _30->weight = _31;
+streamcluster.cpp:1671:8: note: not consecutive access pretmp_92 = points_43(D)->num;
+streamcluster.cpp:1671:8: note: not consecutive access _27 = points_43(D)->p;
+streamcluster.cpp:1671:8: note: not consecutive access _29 = centers_48(D)->p;
+streamcluster.cpp:1671:8: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1666:18: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1677:7: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1678:1: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1734:24: note: not vectorized: number of iterations cannot be computed.
+streamcluster.cpp:1734:24: note: bad loop form.
+streamcluster.cpp:1718:23: note: not vectorized: number of iterations cannot be computed.
+streamcluster.cpp:1718:23: note: bad loop form.
+streamcluster.cpp:1712:45: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1712:45: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1713:51: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1713:51: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1716:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1718:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1739:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1740:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1742:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1744:1: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1734:24: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1727:21: note: not consecutive access _8->pid = i_56;
+streamcluster.cpp:1727:21: note: not consecutive access _8->points = points_32(D);
+streamcluster.cpp:1727:21: note: not consecutive access _8->kfinal = kfinal_39(D);
+streamcluster.cpp:1727:21: note: not consecutive access _8->barrier = &barrier;
+streamcluster.cpp:1718:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1735:19: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1734:24: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1823:21: note: not vectorized: control flow in loop.
+streamcluster.cpp:1823:21: note: bad loop form.
+streamcluster.cpp:1827:25: note: not vectorized: number of iterations cannot be computed.
+streamcluster.cpp:1827:25: note: bad loop form.
+streamcluster.cpp:1819:20: note: not vectorized: not suitable for scatter store *_12 = 1;
+streamcluster.cpp:1819:20: note: bad data references.
+streamcluster.cpp:1813:19: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1814:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1815:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1816:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1818:34: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1819:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1833:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1834:1: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1820:26: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1819:20: note: not consecutive access *_12 = 1;
+streamcluster.cpp:1819:20: note: not consecutive access _9 = _8->assign;
+streamcluster.cpp:1819:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1824:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1825:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1826:14: note: not consecutive access _25 = _24->weight;
+streamcluster.cpp:1826:14: note: not consecutive access _22 = centers_49(D)->p;
+streamcluster.cpp:1826:14: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1827:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1830:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1830:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1828:9: note: not consecutive access _34 = *_33;
+streamcluster.cpp:1828:9: note: not consecutive access _30 = _29->coord;
+streamcluster.cpp:1828:9: note: not consecutive access _28 = centers_49(D)->p;
+streamcluster.cpp:1828:9: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1827:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1823:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1886:3: note: not vectorized: control flow in loop.
+streamcluster.cpp:1886:3: note: bad loop form.
+streamcluster.cpp:1898:23: note: not consecutive access _49->weight = 1.0e+0;
+streamcluster.cpp:1898:23: note: can't use a fully-masked loop because an access isn't contiguous.
+streamcluster.cpp:1898:23: note: cost model: the vector iteration cost = 64 divided by the scalar iteration cost = 12 is greater or equal to the vectorization factor = 4.
+streamcluster.cpp:1898:23: note: not vectorized: vectorization not profitable.
+streamcluster.cpp:1898:23: note: not vectorized: vector version will never be profitable.
+streamcluster.cpp:1880:20: note: not consecutive access _30->weight = 1.0e+0;
+streamcluster.cpp:1880:20: note: not consecutive access _30->coord = _31;
+streamcluster.cpp:1880:20: note: can't use a fully-masked loop because an access isn't contiguous.
+streamcluster.cpp:1866:21: note: not consecutive access _19->coord = _20;
+streamcluster.cpp:1866:21: note: can't use a fully-masked loop because an access isn't contiguous.
+streamcluster.cpp:1846:32: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1847:38: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1848:34: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1851:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1852:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1853:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1863:20: note: not consecutive access points.dim = dim_82(D);
+streamcluster.cpp:1863:20: note: not consecutive access points.num = chunksize_83(D);
+streamcluster.cpp:1863:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1866:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1876:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1880:20: note: not consecutive access centers.num = 0;
+streamcluster.cpp:1880:20: note: not consecutive access centers.p = _23;
+streamcluster.cpp:1880:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1880:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1880:20: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1867:23: note: not consecutive access MEM[(float * *)ivtmp_261] = _263;
+streamcluster.cpp:1867:23: note: not consecutive access MEM[(float * *)ivtmp_265] = _266;
+streamcluster.cpp:1867:23: note: not consecutive access MEM[(float * *)ivtmp_268] = _269;
+streamcluster.cpp:1867:23: note: not consecutive access MEM[(float * *)ivtmp_271] = _272;
+streamcluster.cpp:1867:23: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1867:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1866:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1866:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1866:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1866:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1866:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1866:21: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1882:25: note: not consecutive access MEM[(float *)ivtmp_34] = _209;
+streamcluster.cpp:1882:25: note: not consecutive access MEM[(float *)ivtmp_211] = _212;
+streamcluster.cpp:1882:25: note: not consecutive access MEM[(float *)ivtmp_214] = _215;
+streamcluster.cpp:1882:25: note: not consecutive access MEM[(float *)ivtmp_217] = _218;
+streamcluster.cpp:1882:25: note: not consecutive access MEM[(float * *)ivtmp_188] = _190;
+streamcluster.cpp:1882:25: note: not consecutive access MEM[(float * *)ivtmp_184] = _172;
+streamcluster.cpp:1882:25: note: not consecutive access MEM[(float * *)ivtmp_174] = _178;
+streamcluster.cpp:1882:25: note: not consecutive access MEM[(float * *)ivtmp_176] = _177;
+streamcluster.cpp:1882:25: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1882:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1880:20: note: not consecutive access _17->weight = 1.0e+0;
+streamcluster.cpp:1880:20: note: not consecutive access _17->coord = _18;
+streamcluster.cpp:1880:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1880:20: note: not consecutive access _31->weight = 1.0e+0;
+streamcluster.cpp:1880:20: note: not consecutive access _31->coord = _171;
+streamcluster.cpp:1880:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1880:20: note: not consecutive access _182->weight = 1.0e+0;
+streamcluster.cpp:1880:20: note: not consecutive access _182->coord = _181;
+streamcluster.cpp:1880:20: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1889:35: note: not consecutive access _33 = *_32;
+streamcluster.cpp:1889:35: note: not consecutive access _32 = stream_108(D)->_vptr.PStream;
+streamcluster.cpp:1889:35: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1890:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1892:23: note: not consecutive access _37 = MEM[(int (*) () *)_36 + 8B];
+streamcluster.cpp:1892:23: note: not consecutive access _36 = stream_108(D)->_vptr.PStream;
+streamcluster.cpp:1892:23: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1892:26: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1893:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1894:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1892:26: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1892:79: note: not consecutive access _41 = MEM[(int (*) () *)_40 + 16B];
+streamcluster.cpp:1892:79: note: not consecutive access _40 = stream_108(D)->_vptr.PStream;
+streamcluster.cpp:1892:79: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1892:63: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1898:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1907:38: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1908:30: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1909:32: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1916:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1919:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1920:5: note: not consecutive access _54 = centers.num;
+streamcluster.cpp:1920:5: note: not consecutive access kfinal.155_55 = kfinal;
+streamcluster.cpp:1920:5: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1899:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1898:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1922:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1923:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1926:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1934:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1935:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1936:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1939:21: note: not consecutive access _64 = MEM[(int (*) () *)_63 + 16B];
+streamcluster.cpp:1939:21: note: not consecutive access _63 = stream_108(D)->_vptr.PStream;
+streamcluster.cpp:1939:21: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1939:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1950:36: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1951:28: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1952:30: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1955:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1956:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1957:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1958:1: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1962:43: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1963:42: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1970:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1971:8: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1980:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1981:12: note: not consecutive access stderr.163_3 = stderr;
+streamcluster.cpp:1981:12: note: not consecutive access _2 = *argv_36(D);
+streamcluster.cpp:1981:12: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:1983:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1984:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1985:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1986:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1987:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1988:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1989:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1990:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1991:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1992:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1993:12: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1994:9: note: not vectorized: not enough data-refs in basic block.
+/usr/include/stdlib.h:363:23: note: not vectorized: not enough data-refs in basic block.
+/usr/include/stdlib.h:363:23: note: not vectorized: not enough data-refs in basic block.
+/usr/include/stdlib.h:363:23: note: not vectorized: not enough data-refs in basic block.
+/usr/include/stdlib.h:363:23: note: not vectorized: not enough data-refs in basic block.
+/usr/include/stdlib.h:363:23: note: not vectorized: not enough data-refs in basic block.
+/usr/include/stdlib.h:363:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:2005:9: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:2006:9: note: not vectorized: not enough data-refs in basic block.
+/usr/include/stdlib.h:363:23: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:2016:10: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:2018:3: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:2019:29: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1761:7: note: not consecutive access MEM[(struct SimStream *)_60].D.45566._vptr.PStream = &MEM[(void *)&_ZTV9SimStream + 16B];
+streamcluster.cpp:1761:7: note: not consecutive access MEM[(struct SimStream *)_60].n = n_52;
+streamcluster.cpp:1761:7: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:2022:39: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1789:15: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1790:5: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1791:14: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:1792:11: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:2030:16: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:2036:10: note: not consecutive access _25 = MEM[(int (*) () *)_24 + 32B];
+streamcluster.cpp:2036:10: note: not consecutive access _24 = stream_26->_vptr.PStream;
+streamcluster.cpp:2036:10: note: not vectorized: no grouped stores in basic block.
+streamcluster.cpp:2036:10: note: not vectorized: not enough data-refs in basic block.
+/usr/include/c++/8/iostream:74:25: note: not vectorized: not enough data-refs in basic block.
+streamcluster.cpp:2043:1: note: not vectorized: not enough data-refs in basic block.

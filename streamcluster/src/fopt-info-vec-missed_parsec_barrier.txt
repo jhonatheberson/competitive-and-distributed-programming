@@ -1,0 +1,104 @@
+parsec_barrier.cpp:67:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:69:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:69:17: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:34:10: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:35:7: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:75:26: note: not vectorized: volatile type barrier_6(D)->n ={v} 0;
+parsec_barrier.cpp:75:26: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:76:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:77:24: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:77:24: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:77:24: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:84:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:86:29: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:87:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:88:27: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:89:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:93:3: note: not vectorized: volatile type _3 ={v} barrier_6(D)->n;
+parsec_barrier.cpp:93:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:93:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:93:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:99:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:99:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:99:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:99:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:99:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:99:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:112:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:113:12: note: not consecutive access _4 = *attr_7(D);
+parsec_barrier.cpp:113:12: note: not consecutive access *pshared_8(D) = _4;
+parsec_barrier.cpp:113:12: note: not vectorized: no grouped stores in basic block.
+parsec_barrier.cpp:113:12: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:118:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:119:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:121:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:34:10: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:35:7: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:122:9: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:122:9: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:189:7: note: not vectorized: control flow in loop.
+parsec_barrier.cpp:189:7: note: bad loop form.
+parsec_barrier.cpp:185:57: note: not vectorized: number of iterations cannot be computed.
+parsec_barrier.cpp:185:57: note: bad loop form.
+parsec_barrier.cpp:184:62: note: not vectorized: control flow in loop.
+parsec_barrier.cpp:184:62: note: bad loop form.
+parsec_barrier.cpp:156:5: note: not vectorized: control flow in loop.
+parsec_barrier.cpp:156:5: note: bad loop form.
+parsec_barrier.cpp:152:55: note: not vectorized: number of iterations cannot be computed.
+parsec_barrier.cpp:152:55: note: bad loop form.
+parsec_barrier.cpp:151:61: note: not vectorized: control flow in loop.
+parsec_barrier.cpp:151:61: note: bad loop form.
+parsec_barrier.cpp:131:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:133:26: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:134:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:148:3: note: not vectorized: volatile type _2 ={v} barrier_41(D)->is_arrival_phase;
+parsec_barrier.cpp:148:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:149:25: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:151:38: note: not vectorized: volatile type i ={v} 0;
+parsec_barrier.cpp:151:38: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:151:38: note: not vectorized: volatile type i.6_73 ={v} i;
+parsec_barrier.cpp:151:38: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:151:38: note: not vectorized: volatile type i.6_5 ={v} i;
+parsec_barrier.cpp:151:38: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:151:38: note: not vectorized: volatile type i.7_6 ={v} i;
+parsec_barrier.cpp:151:38: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:152:36: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:152:55: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:153:5: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:156:11: note: not vectorized: volatile type _9 ={v} barrier_41(D)->is_arrival_phase;
+parsec_barrier.cpp:156:11: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:157:29: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:158:7: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:159:29: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:159:29: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:169:3: note: not vectorized: volatile type _13 ={v} barrier_41(D)->n;
+parsec_barrier.cpp:169:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:173:27: note: not vectorized: volatile type barrier_41(D)->is_arrival_phase ={v} 0;
+parsec_barrier.cpp:173:27: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:181:5: note: not vectorized: volatile type _19 ={v} barrier_41(D)->is_arrival_phase;
+parsec_barrier.cpp:181:5: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:182:27: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:184:39: note: not vectorized: volatile type i ={v} 0;
+parsec_barrier.cpp:184:39: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:184:39: note: not vectorized: volatile type i.14_10 ={v} i;
+parsec_barrier.cpp:184:39: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:184:39: note: not vectorized: volatile type i.14_21 ={v} i;
+parsec_barrier.cpp:184:39: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:184:39: note: not vectorized: volatile type i.15_22 ={v} i;
+parsec_barrier.cpp:184:39: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:185:38: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:185:57: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:186:7: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:189:22: note: not vectorized: volatile type _24 ={v} barrier_41(D)->is_arrival_phase;
+parsec_barrier.cpp:189:22: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:190:31: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:191:9: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:192:31: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:192:31: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:201:3: note: not vectorized: volatile type _26 ={v} barrier_41(D)->n;
+parsec_barrier.cpp:201:3: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:203:27: note: not vectorized: volatile type barrier_41(D)->is_arrival_phase ={v} 1;
+parsec_barrier.cpp:203:27: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:205:23: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:207:18: note: not vectorized: not enough data-refs in basic block.
+parsec_barrier.cpp:207:18: note: not vectorized: not enough data-refs in basic block.
