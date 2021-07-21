@@ -18,13 +18,13 @@ em nosso programa utilizei da seguinte forma:
 
 com a seguinte saida:
 
-[fopt-info-vec-missed_streamclsuter](fopt-info-vec-missed_streamclsuter.txt)
+[fopt-info-vec-missed_streamclsuter](https://github.com/jhonatheberson/competitive-and-distributed-programming/blob/master/vetorizacao/fopt-info-vec-missed_streamclsuter.txt)
 
 
 ```
 /usr/bin/g++ -pg -O3 -fopt-info-vec-missed -g -funroll-loops -fprefetch-loop-arrays -fpermissive -fno-exceptions -static-libgcc -Wl,--hash-style=both,--as-needed -DPARSEC_VERSION=3.0-beta-20150206 -DENABLE_THREADS -pthread -c parsec_barrier.cpp  2>&1 | tee fopt-info-vec-missed_parsec_barrier.txt
 ```
 
-[fopt-info-vec-missed_parsec_barrier](fopt-info-vec-missed_parsec_barrier.txt)
+[fopt-info-vec-missed_parsec_barrier](https://github.com/jhonatheberson/competitive-and-distributed-programming/blob/master/vetorizacao/fopt-info-vec-missed_parsec_barrier.txt)
 
 
