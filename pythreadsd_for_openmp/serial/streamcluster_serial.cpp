@@ -190,12 +190,11 @@ double pgain(long x, Points *points, double z, long int *numcenters)
   //double initime = omp_get_wtime();
 
   float* x_cost_arr = (float*)malloc(points->num*sizeof(float));
-  #pragma omp parallel num_threads(2)
-    #pragma omp for
-      for ( i = 0; i < points->num; i++ ) {
-        x_cost_arr[i] =  dist(points->p[i], points->p[x], points->dim);
-        x_cost_arr[i] *= points->p[i].weight;
-      }
+  
+  for ( i = 0; i < points->num; i++ ) {
+    x_cost_arr[i] =  dist(points->p[i], points->p[x], points->dim);
+    x_cost_arr[i] *= points->p[i].weight;
+  }
   
   //double finishtime = omp_get_wtime();
   //printf("time = %f\n",finishtime-initime);

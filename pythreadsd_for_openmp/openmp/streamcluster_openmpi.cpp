@@ -9,11 +9,6 @@
 #include <limits.h>
 #include <omp.h>
 
-#ifdef ENABLE_THREADS
-#include <pthread.h>
-#include "parsec_barrier.hpp"
-#endif
-
 #ifdef ENABLE_PARSEC_HOOKS
 #include <hooks.h>
 #endif
@@ -45,9 +40,9 @@ static bool* is_center; //whether a point is a center
 static int* center_table; //index table of centers
 
 static int nproc; //# of threads
-//int gg = 0;
-//double* timesgg;
-//double ggsum = 0;
+// int gg = 0;
+// double* timesgg;
+// double ggsum = 0;
 
 float dist(Point p1, Point p2, int dim);
 
@@ -108,26 +103,17 @@ float dist(Point p1, Point p2, int dim)
   return(result);
 }
 
-float pspeedy(Points *points, float z, long *kcenter, int pid, pthread_barrier_t* barrier)
+float pspeedy(Points *points, float z, long *kcenter)
 {
-#ifdef ENABLE_THREADS
-  pthread_barrier_wait(barrier);
-#endif
-  long bsize = points->num/nproc;
-  long k1 = bsize * pid;
-  long k2 = k1 + bsize;
-  if( pid == nproc-1 ) k2 = points->num;
+
+  long k1 = 0;
+  long k2 = points->num;
 
   static double totalcost;
 
   static bool open = false;
-  static double* costs; //cost for each thread. 
+  static double costs; //cost for each thread. 
   static int i;
-
-#ifdef ENABLE_THREADS
-  static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
-  static pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
-#endif
 
   for( int k = k1; k < k2; k++ )    {
     float distance = dist(points->p[k],points->p[0],points->dim);
@@ -135,102 +121,38 @@ float pspeedy(Points *points, float z, long *kcenter, int pid, pthread_barrier_t
     points->p[k].assign=0;
   }
 
-  if( pid==0 )   {
-    *kcenter = 1;
-    costs = (double*)malloc(sizeof(double)*nproc);
-  }
+  *kcenter = 1;
+  
+  for(i = 1; i < points->num; i++ )  {
+    bool to_open = ((float)lrand48()/(float)INT_MAX)<(points->p[i].cost/z);
+    if( to_open )  {
+      (*kcenter)++;
 
-#ifdef ENABLE_THREADS
-  pthread_barrier_wait(barrier);
-#endif
-    
-  if( pid != 0 ) { // we are not the master threads. we wait until a center is opened.
-    while(1) {
-#ifdef ENABLE_THREADS
-      pthread_mutex_lock(&mutex);
-      while(!open) pthread_cond_wait(&cond,&mutex);
-      pthread_mutex_unlock(&mutex);
-#endif
-      if( i >= points->num ) break;
-      for( int k = k1; k < k2; k++ )
-	{
-	  float distance = dist(points->p[i],points->p[k],points->dim);
-	  if( distance*points->p[k].weight < points->p[k].cost )
-	    {
-	      points->p[k].cost = distance * points->p[k].weight;
-	      points->p[k].assign=i;
-	    }
-	}
-#ifdef ENABLE_THREADS
-      pthread_barrier_wait(barrier);
-      pthread_barrier_wait(barrier);
-#endif
-    } 
-  }
-  else  { // I am the master thread. I decide whether to open a center and notify others if so. 
-    for(i = 1; i < points->num; i++ )  {
-      bool to_open = ((float)lrand48()/(float)INT_MAX)<(points->p[i].cost/z);
-      if( to_open )  {
-	(*kcenter)++;
-#ifdef ENABLE_THREADS
-	pthread_mutex_lock(&mutex);
-#endif
-	open = true;
-#ifdef ENABLE_THREADS
-	pthread_mutex_unlock(&mutex);
-	pthread_cond_broadcast(&cond);
-#endif
-	for( int k = k1; k < k2; k++ )  {
-	  float distance = dist(points->p[i],points->p[k],points->dim);
-	  if( distance*points->p[k].weight < points->p[k].cost )  {
-	    points->p[k].cost = distance * points->p[k].weight;
-	    points->p[k].assign=i;
-	  }
-	}
-#ifdef ENABLE_THREADS
-	pthread_barrier_wait(barrier);
-#endif
-	open = false;
-#ifdef ENABLE_THREADS
-	pthread_barrier_wait(barrier);
-#endif
+      open = true;
+
+      for( int k = k1; k < k2; k++ )  {
+        float distance = dist(points->p[i],points->p[k],points->dim);
+        if( distance*points->p[k].weight < points->p[k].cost )  {
+          points->p[k].cost = distance * points->p[k].weight;
+          points->p[k].assign=i;
+        }
       }
+
+      open = false;
     }
-#ifdef ENABLE_THREADS
-    pthread_mutex_lock(&mutex);
-#endif
-    open = true;
-#ifdef ENABLE_THREADS
-    pthread_mutex_unlock(&mutex);
-    pthread_cond_broadcast(&cond);
-#endif
   }
-#ifdef ENABLE_THREADS
-  pthread_barrier_wait(barrier);
-#endif
+  
   open = false;
   double mytotal = 0;
   for( int k = k1; k < k2; k++ )  {
     mytotal += points->p[k].cost;
   }
-  costs[pid] = mytotal;
-#ifdef ENABLE_THREADS
-  pthread_barrier_wait(barrier);
-#endif
-  // aggregate costs from each thread
-  if( pid == 0 )
-    {
-      totalcost=z*(*kcenter);
-      for( int i = 0; i < nproc; i++ )
-	{
-	  totalcost += costs[i];
-	} 
-      free(costs);
-    }
-#ifdef ENABLE_THREADS
-  pthread_barrier_wait(barrier);
-#endif
+  costs = mytotal;
 
+  // aggregate costs from each thread
+  totalcost=z*(*kcenter);
+  totalcost += costs;
+    
   return(totalcost);
 }
 
@@ -238,7 +160,6 @@ float pspeedy(Points *points, float z, long *kcenter, int pid, pthread_barrier_t
 double pgain(long x, Points *points, double z, long int *numcenters)
 {
 
-  //declares
   int i;
   int number_of_centers_to_close = 0;
   double cost_of_opening_x = 0;
@@ -248,15 +169,11 @@ double pgain(long x, Points *points, double z, long int *numcenters)
   int stride = *numcenters + 2;
   int cl = CACHE_LINE/sizeof(double);
 
-  //small if
-  if( stride % cl != 0 ) { 
+  if( stride % cl != 0 )  
     stride = cl * ( stride / cl + 1);
-  }
-
-  //memory stuff 1
+  
   work_mem = (double*) malloc(stride*2*sizeof(double));
 
-  //small for
   int count = 0;
   for( int i = 0; i < points->num; i++ ) {
     if(is_center[i]) {
@@ -264,29 +181,27 @@ double pgain(long x, Points *points, double z, long int *numcenters)
     }
   }
 
-  //memory stuff 3
   memset(switch_membership, 0, points->num*sizeof(bool));
   memset(work_mem, 0, stride*2*sizeof(double));
   double* lower = &work_mem[0];
   double* gl_lower = &work_mem[stride];
 
-  //big for 1 - WORST ONE - 0.04s ea
-  double initime = omp_get_wtime();
+  // big for 1 - WORST ONE - 0.04s ea
+  // double initime = omp_get_wtime();
 
-  
   float* x_cost_arr = (float*)malloc(points->num*sizeof(float));
-  #pragma omp parallel num_threads(1)
+  #pragma omp parallel num_threads(2)
     #pragma omp for
       for ( i = 0; i < points->num; i++ ) {
         x_cost_arr[i] =  dist(points->p[i], points->p[x], points->dim);
         x_cost_arr[i] *= points->p[i].weight;
       }
   
-  double finishtime = omp_get_wtime();
-  //printf("time = %f\n",finishtime-initime);
-  //ggsum += finishtime-initime;
-  //gg++;
-  //timesgg[gg] = finishtime-initime;
+  // double finishtime = omp_get_wtime();
+  // printf("time = %f\n",finishtime-initime);
+  // ggsum += finishtime-initime;
+  // gg++;
+  // timesgg[gg] = finishtime-initime;
 
   for ( i = 0; i < points->num; i++ ) {
     float current_cost = points->p[i].cost;
@@ -316,8 +231,6 @@ double pgain(long x, Points *points, double z, long int *numcenters)
     }
   }*/
 
-  
-
   // big for 2 - 0.00006s ea
   for ( int i = 0; i < points->num; i++ ) {
     if( is_center[i] ) {
@@ -331,8 +244,6 @@ double pgain(long x, Points *points, double z, long int *numcenters)
     }
   }
   
-
-  // memory stuff 4
   work_mem[*numcenters] = number_of_centers_to_close;
   work_mem[*numcenters+1] = cost_of_opening_x;
   gl_cost_of_opening_x = z;
@@ -373,12 +284,9 @@ double pgain(long x, Points *points, double z, long int *numcenters)
 
 
 float pFL(Points *points, int *feasible, int numfeasible,
-  float z, long *k, double cost, long iter, float e, 
-  int pid, pthread_barrier_t* barrier)
+  float z, long *k, double cost, long iter, float e)
 {
-#ifdef ENABLE_THREADS
-  pthread_barrier_wait(barrier);
-#endif
+
   long i;
   long x;
   double change;
@@ -390,26 +298,19 @@ float pFL(Points *points, int *feasible, int numfeasible,
     change = 0.0;
     numberOfPoints = points->num;
     /* randomize order in which centers are considered */
-
-    if( pid == 0 ) {
-      intshuffle(feasible, numfeasible);
-    }
-#ifdef ENABLE_THREADS
-    pthread_barrier_wait(barrier);
-#endif
+    intshuffle(feasible, numfeasible);
+    
     for (i=0;i<iter;i++) {
       x = i%numfeasible;
       change += pgain(feasible[x], points, z, k);
     }
     cost -= change;
-#ifdef ENABLE_THREADS
-    pthread_barrier_wait(barrier);
-#endif
+
   }
   return(cost);
 }
 
-int selectfeasible_fast(Points *points, int **feasible, int kmin, int pid, pthread_barrier_t* barrier)
+int selectfeasible_fast(Points *points, int **feasible, int kmin)
 {
   int numfeasible = points->num;
   if (numfeasible > (ITER*kmin*log((double)kmin)))
@@ -465,8 +366,7 @@ int selectfeasible_fast(Points *points, int **feasible, int kmin, int pid, pthre
   return numfeasible;
 }
 
-float pkmedian(Points *points, long kmin, long kmax, long* kfinal,
-	       int pid, pthread_barrier_t* barrier )
+float pkmedian(Points *points, long kmin, long kmax, long* kfinal)
 {
   int i;
   double cost;
@@ -476,37 +376,25 @@ float pkmedian(Points *points, long kmin, long kmax, long* kfinal,
   static long k;
   static int *feasible;
   static int numfeasible;
-  static double* hizs;
+  static double hizs;
 
-  if( pid==0 ) hizs = (double*)calloc(nproc,sizeof(double));
+  hizs = 0.0;
   hiz = loz = 0.0;
   long numberOfPoints = points->num;
   long ptDimension = points->dim;
 
   //my block
-  long bsize = points->num/nproc;
-  long k1 = bsize * pid;
-  long k2 = k1 + bsize;
-  if( pid == nproc-1 ) k2 = points->num;
-
-#ifdef ENABLE_THREADS
-  pthread_barrier_wait(barrier);
-#endif
+  long k1 = 0;
+  long k2 = points->num;
 
   double myhiz = 0;
   for (long kk=k1;kk < k2; kk++ ) {
     myhiz += dist(points->p[kk], points->p[0],
 		      ptDimension)*points->p[kk].weight;
   }
-  hizs[pid] = myhiz;
-
-#ifdef ENABLE_THREADS  
-  pthread_barrier_wait(barrier);
-#endif
-
-  for( int i = 0; i < nproc; i++ )   {
-    hiz += hizs[i];
-  }
+  hizs = myhiz;
+  hiz += hizs;
+  
 
   loz=0.0; z = (hiz+loz)/2.0;
   /* NEW: Check whether more centers than points! */
@@ -517,55 +405,46 @@ float pkmedian(Points *points, long kmin, long kmax, long* kfinal,
       points->p[kk].cost = 0;
     }
     cost = 0;
-    if( pid== 0 ) {
-      free(hizs); 
-      *kfinal = k;
-    }
+    *kfinal = k;
+    
     return cost;
   }
 
-  if( pid == 0 ) shuffle(points);
-  cost = pspeedy(points, z, &k, pid, barrier);
+  shuffle(points);
+  cost = pspeedy(points, z, &k);
 
   i=0;
   /* give speedy SP chances to get at least kmin/2 facilities */
   while ((k < kmin)&&(i<SP)) {
-    cost = pspeedy(points, z, &k, pid, barrier);
+    cost = pspeedy(points, z, &k);
     i++;
   }
 
   /* if still not enough facilities, assume z is too high */
   while (k < kmin) {
     if (i >= SP) {hiz=z; z=(hiz+loz)/2.0; i=0;}
-    if( pid == 0 ) shuffle(points);
-    cost = pspeedy(points, z, &k, pid, barrier);
+    shuffle(points);
+    cost = pspeedy(points, z, &k);
     i++;
   }
-  
-  if( pid == 0 )
-    {
-      numfeasible = selectfeasible_fast(points,&feasible,kmin,pid,barrier);
-      for( int i = 0; i< points->num; i++ ) {
-	is_center[points->p[i].assign]= true;
-      }
-    }
 
-#ifdef ENABLE_THREADS
-  pthread_barrier_wait(barrier);
-#endif
-
+  numfeasible = selectfeasible_fast(points,&feasible,kmin);
+  for( int i = 0; i< points->num; i++ ) {
+    is_center[points->p[i].assign]= true;
+  }
+    
   while(1) {
     /* first get a rough estimate on the FL solution */
     lastcost = cost;
     cost = pFL(points, feasible, numfeasible,
-	       z, &k, cost, (long)(ITER*kmax*log((double)kmax)), 0.1, pid, barrier);
+	       z, &k, cost, (long)(ITER*kmax*log((double)kmax)), 0.1);
 
     /* if number of centers seems good, try a more accurate FL */
     if (((k <= (1.1)*kmax)&&(k >= (0.9)*kmin))||
 	((k <= kmax+2)&&(k >= kmin-2))) {
 
       cost = pFL(points, feasible, numfeasible,
-		 z, &k, cost, (long)(ITER*kmax*log((double)kmax)), 0.001, pid, barrier);
+		 z, &k, cost, (long)(ITER*kmax*log((double)kmax)), 0.001);
     }
 
     if (k > kmax) {
@@ -582,18 +461,10 @@ float pkmedian(Points *points, long kmin, long kmax, long* kfinal,
       { 
 	break;
       }
-#ifdef ENABLE_THREADS
-    pthread_barrier_wait(barrier);
-#endif
   }
 
-  //clean up...
-  if( pid==0 ) {
-    free(feasible); 
-    free(hizs);
-    *kfinal = k;
-  }
-
+  *kfinal = k;
+  
   return cost;
 }
 
@@ -654,52 +525,26 @@ struct pkmedian_arg_t
   long kmin;
   long kmax;
   long* kfinal;
-  int pid;
-  pthread_barrier_t* barrier;
 };
 
 void* localSearchSub(void* arg_) {
 
   pkmedian_arg_t* arg= (pkmedian_arg_t*)arg_;
-  pkmedian(arg->points,arg->kmin,arg->kmax,arg->kfinal,arg->pid,arg->barrier);
+  pkmedian(arg->points,arg->kmin,arg->kmax,arg->kfinal);
 
   return NULL;
 }
 
-void localSearch( Points* points, long kmin, long kmax, long* kfinal ) {
-    pthread_barrier_t barrier;
-    pthread_t* threads = new pthread_t[nproc];
-    pkmedian_arg_t* arg = new pkmedian_arg_t[nproc];
+void localSearch( Points* points, long kmin, long kmax, long* kfinal) {
+    pkmedian_arg_t arg;
+    
+    arg.points = points;
+    arg.kmin = kmin;
+    arg.kmax = kmax;
+    arg.kfinal = kfinal;
 
-#ifdef ENABLE_THREADS
-    pthread_barrier_init(&barrier,NULL,nproc);
-#endif
-    for( int i = 0; i < nproc; i++ ) {
-      arg[i].points = points;
-      arg[i].kmin = kmin;
-      arg[i].kmax = kmax;
-      arg[i].pid = i;
-      arg[i].kfinal = kfinal;
+    localSearchSub(&arg);
 
-      arg[i].barrier = &barrier;
-#ifdef ENABLE_THREADS
-      pthread_create(threads+i,NULL,localSearchSub,(void*)&arg[i]);
-#else
-      localSearchSub(&arg[0]);
-#endif
-    }
-
-#ifdef ENABLE_THREADS
-    for ( int i = 0; i < nproc; i++) {
-      pthread_join(threads[i],NULL);
-    }
-#endif
-
-    delete[] threads;
-    delete[] arg;
-#ifdef ENABLE_THREADS
-    pthread_barrier_destroy(&barrier);
-#endif
 }
 
 class PStream {
@@ -947,20 +792,20 @@ int main(int argc, char **argv)
 #endif
 
   delete stream;
-  /*
-  FILE* fp = fopen("outtest1", "w");
-  if( fp==NULL ) {
-    fprintf(stderr, "error opening %s\n","outtest1");
-    exit(1);
-  }
-  for( int k = 0; k < gg; k++ ) 
-    fprintf(fp, "%f\n", timesgg[k]);
-  fclose(fp);
-  */
+  
+  // FILE* fp = fopen("outtest1", "w");
+  // if( fp==NULL ) {
+  //   fprintf(stderr, "error opening %s\n","outtest1");
+  //   exit(1);
+  // }
+  // for( int k = 0; k < gg; k++ ) 
+  //   fprintf(fp, "%f\n", timesgg[k]);
+  // fclose(fp);
+  
 
 
-  //printf("%d\n", gg);
-  //printf("%f", ggsum);
+  // printf("%d\n", gg);
+  // printf("%f", ggsum);
 #ifdef ENABLE_PARSEC_HOOKS
   __parsec_bench_end();
 #endif
