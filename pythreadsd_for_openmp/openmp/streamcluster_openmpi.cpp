@@ -173,9 +173,11 @@ double pgain(long x, Points *points, double z, long int *numcenters)
     stride = cl * ( stride / cl + 1);
   
   work_mem = (double*) malloc(stride*2*sizeof(double));
+  //====================================
   // menos 40s na execução
   // ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,41s user 0,00s system 172% cpu 0,241 total
   int count = 0;
+  double inittime1 = omp_get_wtime();
   #pragma omp parallel num_threads(nproc)
     #pragma omp for
       for( int i = 0; i < points->num; i++ ) {
@@ -183,12 +185,20 @@ double pgain(long x, Points *points, double z, long int *numcenters)
           center_table[i] = count++;
         }
       }
+  double endtime1 = omp_get_wtime();
+  printf("1 for time = %f\n",endtime1-inittime1);
+  ggsum += endtime1-inittime1;
+  gg++;
+  timesgg[gg] = endtime1-inittime1;
+  //======================================
 
   memset(switch_membership, 0, points->num*sizeof(bool));
   memset(work_mem, 0, stride*2*sizeof(double));
   double* lower = &work_mem[0];
   double* gl_lower = &work_mem[stride];
 
+
+  //======================================
   // big for 1 - WORST ONE - 0.04s ea
   double initime = omp_get_wtime();
   // ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,80s user 0,00s system 184% cpu 0,433 total
@@ -201,13 +211,14 @@ double pgain(long x, Points *points, double z, long int *numcenters)
       }
   
   double finishtime = omp_get_wtime();
-  printf("1 for time = %f\n",finishtime-initime);
+  printf("2 for time = %g\n",finishtime-initime);
   ggsum += finishtime-initime;
   gg++;
   timesgg[gg] = finishtime-initime;
-  //---------------------
+  //======================================
 
-  double inittime2 = omp_get_wtime();
+  //======================================
+  double inittime3 = omp_get_wtime();
   #pragma omp parallel num_threads(nproc)
     #pragma omp for
       for ( i = 0; i < points->num; i++ ) {
@@ -222,12 +233,12 @@ double pgain(long x, Points *points, double z, long int *numcenters)
           lower[center_table[assign]] += current_cost - x_cost_arr[i];
         }
       }
-  double endtime2 = omp_get_wtime();
-  printf("2 for time = %f\n",endtime2-inittime2);
-  ggsum += endtime2-inittime2;
+  double endtime3 = omp_get_wtime();
+  printf("3 for time = %f\n",endtime3-inittime3);
+  ggsum += endtime3-inittime3;
   gg++;
-  timesgg[gg] = endtime2-inittime2;
-
+  timesgg[gg] = endtime3-inittime3;
+  //======================================
   /* sequencial
   for ( i = 0; i < points->num; i++ ) {
     float x_cost = dist(points->p[i], points->p[x], points->dim) * points->p[i].weight;
@@ -243,18 +254,28 @@ double pgain(long x, Points *points, double z, long int *numcenters)
     }
   }*/
 
+  //======================================
   // big for 2 - 0.00006s ea
-  for ( int i = 0; i < points->num; i++ ) {
-    if( is_center[i] ) {
-      double low = z;
-	    low += work_mem[center_table[i]];
-      gl_lower[center_table[i]] = low;
-      if ( low > 0 ) {
-        ++number_of_centers_to_close;  
-        cost_of_opening_x -= low;
+  double inittime4 = omp_get_wtime();
+  #pragma omp parallel num_threads(nproc)
+    #pragma omp for 
+      for ( int i = 0; i < points->num; i++ ) {
+        if( is_center[i] ) {
+          double low = z;
+          low += work_mem[center_table[i]];
+          gl_lower[center_table[i]] = low;
+          if ( low > 0 ) {
+            ++number_of_centers_to_close;  
+            cost_of_opening_x -= low;
+          }
+        }
       }
-    }
-  }
+  double endtime4 = omp_get_wtime();
+  printf("4 for time = %f\n",endtime4-inittime4);
+  ggsum += endtime4-inittime4;
+  gg++;
+  timesgg[gg] = endtime4-inittime4;
+  //======================================
   
   work_mem[*numcenters] = number_of_centers_to_close;
   work_mem[*numcenters+1] = cost_of_opening_x;
