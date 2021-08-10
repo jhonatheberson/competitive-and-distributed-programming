@@ -40,9 +40,9 @@ static bool* is_center; //whether a point is a center
 static int* center_table; //index table of centers
 
 static int nproc; //# of threads
-// int gg = 0;
-// double* timesgg;
-// double ggsum = 0;
+int gg = 0;
+double* timesgg;
+double ggsum = 0;
 
 float dist(Point p1, Point p2, int dim);
 
@@ -177,7 +177,7 @@ double pgain(long x, Points *points, double z, long int *numcenters)
   // ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,41s user 0,00s system 172% cpu 0,241 total
   int count = 0;
   #pragma omp parallel num_threads(nproc)
-    #pragma om for
+    #pragma omp for
       for( int i = 0; i < points->num; i++ ) {
         if(is_center[i]) {
           center_table[i] = count++;
@@ -190,7 +190,7 @@ double pgain(long x, Points *points, double z, long int *numcenters)
   double* gl_lower = &work_mem[stride];
 
   // big for 1 - WORST ONE - 0.04s ea
-  // double initime = omp_get_wtime();
+  double initime = omp_get_wtime();
   // ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,80s user 0,00s system 184% cpu 0,433 total
   float* x_cost_arr = (float*)malloc(points->num*sizeof(float));
   #pragma omp parallel num_threads(nproc)
@@ -200,24 +200,33 @@ double pgain(long x, Points *points, double z, long int *numcenters)
         x_cost_arr[i] *= points->p[i].weight;
       }
   
-  // double finishtime = omp_get_wtime();
-  // printf("time = %f\n",finishtime-initime);
-  // ggsum += finishtime-initime;
-  // gg++;
-  // timesgg[gg] = finishtime-initime;
+  double finishtime = omp_get_wtime();
+  printf("1 for time = %f\n",finishtime-initime);
+  ggsum += finishtime-initime;
+  gg++;
+  timesgg[gg] = finishtime-initime;
+  //---------------------
 
-  for ( i = 0; i < points->num; i++ ) {
-    float current_cost = points->p[i].cost;
+  double inittime2 = omp_get_wtime();
+  #pragma omp parallel num_threads(nproc)
+    #pragma omp for
+      for ( i = 0; i < points->num; i++ ) {
+        float current_cost = points->p[i].cost;
 
-    if ( x_cost_arr[i] < current_cost ) {
-      switch_membership[i] = 1;
-      cost_of_opening_x += x_cost_arr[i] - current_cost;
+        if ( x_cost_arr[i] < current_cost ) {
+          switch_membership[i] = 1;
+          cost_of_opening_x += x_cost_arr[i] - current_cost;
 
-    } else {
-      int assign = points->p[i].assign;
-      lower[center_table[assign]] += current_cost - x_cost_arr[i];
-    }
-  }
+        } else {
+          int assign = points->p[i].assign;
+          lower[center_table[assign]] += current_cost - x_cost_arr[i];
+        }
+      }
+  double endtime2 = omp_get_wtime();
+  printf("2 for time = %f\n",endtime2-inittime2);
+  ggsum += endtime2-inittime2;
+  gg++;
+  timesgg[gg] = endtime2-inittime2;
 
   /* sequencial
   for ( i = 0; i < points->num; i++ ) {
@@ -807,8 +816,8 @@ int main(int argc, char **argv)
   
 
 
-  // printf("%d\n", gg);
-  // printf("%f", ggsum);
+  printf("%d\n", gg);
+  printf("%f", ggsum);
 #ifdef ENABLE_PARSEC_HOOKS
   __parsec_bench_end();
 #endif
