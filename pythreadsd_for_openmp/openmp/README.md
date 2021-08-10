@@ -20,7 +20,7 @@ time ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2
 
 ## function pgain
 
-- First for
+- First for - **3 for a ser paralelizado**
 
 
   ~~~c++
@@ -39,7 +39,7 @@ time ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2
       ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,69s user 0,03s system 184% cpu 0,386 total
     ~~~
 
-- Second For
+- Second For - **1 for a ser paralelizado**
 
 
   ~~~c++
@@ -58,52 +58,51 @@ time ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2
   ~~~
 
 
- - Tree For
+ - Tree For **2 for a ser paralelizado**
 
 
- ~~~c++
-#pragma omp parallel num_threads(nproc)
-    #pragma omp for
-      for ( i = 0; i < points->num; i++ ) {
-        float current_cost = points->p[i].cost;
+    ~~~c++
+    #pragma omp parallel num_threads(nproc)
+        #pragma omp for
+          for ( i = 0; i < points->num; i++ ) {
+            float current_cost = points->p[i].cost;
 
-        if ( x_cost_arr[i] < current_cost ) {
-          switch_membership[i] = 1;
-          cost_of_opening_x += x_cost_arr[i] - current_cost;
+            if ( x_cost_arr[i] < current_cost ) {
+              switch_membership[i] = 1;
+              cost_of_opening_x += x_cost_arr[i] - current_cost;
 
-        } else {
-          int assign = points->p[i].assign;
-          lower[center_table[assign]] += current_cost - x_cost_arr[i];
+            } else {
+              int assign = points->p[i].assign;
+              lower[center_table[assign]] += current_cost - x_cost_arr[i];
+            }
+          }
+    ~~~
+    conseguimos o seguinte speedup:
+
+    ~~~bash
+    ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,48s user 0,00s system 175% cpu 0,279 total
+    ~~~
+
+ - Four for - **4 for a ser paralelizado**
+
+
+    ~~~c++
+    #pragma omp parallel num_threads(nproc)
+    #pragma omp for 
+      for ( int i = 0; i < points->num; i++ ) {
+        if( is_center[i] ) {
+          double low = z;
+          low += work_mem[center_table[i]];
+          gl_lower[center_table[i]] = low;
+          if ( low > 0 ) {
+            ++number_of_centers_to_close;  
+            cost_of_opening_x -= low;
+          }
         }
       }
- ~~~
-conseguimos o seguinte speedup:
+    ~~~
+    conseguimos o seguinte speedup:
 
- ~~~bash
-./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,48s user 0,00s system 175% cpu 0,279 total
- ~~~
-
- novamento vamos paralelizar outro for que é esse:
-
-
- ~~~c++
-#pragma omp parallel num_threads(nproc)
-    #pragma omp for
-      for ( i = 0; i < points->num; i++ ) {
-        float current_cost = points->p[i].cost;
-
-        if ( x_cost_arr[i] < current_cost ) {
-          switch_membership[i] = 1;
-          cost_of_opening_x += x_cost_arr[i] - current_cost;
-
-        } else {
-          int assign = points->p[i].assign;
-          lower[center_table[assign]] += current_cost - x_cost_arr[i];
-        }
-      }
- ~~~
-conseguimos o seguinte speedup:
-
-  ~~~bash
-  ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,48s user 0,00s system 175% cpu 0,279 total
-  ~~~
+    ~~~bash
+    ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,02s user 0,00s system 87% cpu 0,021 total
+    ~~~
