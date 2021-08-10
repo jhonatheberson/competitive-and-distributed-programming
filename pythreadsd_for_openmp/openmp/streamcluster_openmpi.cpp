@@ -173,13 +173,16 @@ double pgain(long x, Points *points, double z, long int *numcenters)
     stride = cl * ( stride / cl + 1);
   
   work_mem = (double*) malloc(stride*2*sizeof(double));
-
+  // menos 40s na execução
+  // ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,41s user 0,00s system 172% cpu 0,241 total
   int count = 0;
-  for( int i = 0; i < points->num; i++ ) {
-    if(is_center[i]) {
-      center_table[i] = count++;
-    }
-  }
+  #pragma omp parallel num_threads(nproc)
+    #pragma om for
+      for( int i = 0; i < points->num; i++ ) {
+        if(is_center[i]) {
+          center_table[i] = count++;
+        }
+      }
 
   memset(switch_membership, 0, points->num*sizeof(bool));
   memset(work_mem, 0, stride*2*sizeof(double));
@@ -188,9 +191,9 @@ double pgain(long x, Points *points, double z, long int *numcenters)
 
   // big for 1 - WORST ONE - 0.04s ea
   // double initime = omp_get_wtime();
-
+  // ./streamcluster_openmpi 10 20 200 1000 1 1000 myin myout 2  0,80s user 0,00s system 184% cpu 0,433 total
   float* x_cost_arr = (float*)malloc(points->num*sizeof(float));
-  #pragma omp parallel num_threads(2)
+  #pragma omp parallel num_threads(nproc)
     #pragma omp for
       for ( i = 0; i < points->num; i++ ) {
         x_cost_arr[i] =  dist(points->p[i], points->p[x], points->dim);
