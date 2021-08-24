@@ -86,7 +86,7 @@ int main(void) {
 
    Mat_vect_mult(local_A, local_x, local_y, local_m, n, local_n, comm);
 
-   Print_vector("y", local_y, m, local_m, my_rank, comm);
+  //  Print_vector("y", local_y, m, local_m, my_rank, comm);
 
    free(local_A);
    free(local_x);
@@ -289,7 +289,8 @@ void Read_matrix(
  * 2. local_n should be the same on all processes
  */
 
-void Read_vector(double local_vector[], int n, int local_n,int my_rank, MPI_Datatype type, MPI_Comm  comm){
+void Read_vector(double local_vector[], int n, int local_n,
+int my_rank, MPI_Datatype type, MPI_Comm  comm){
   int i;
   double *vector = NULL;
 

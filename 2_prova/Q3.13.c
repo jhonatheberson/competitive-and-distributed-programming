@@ -75,6 +75,13 @@ int main(void) {
             scanf("%d",&vetor2[i]);
 
     }
+    /*
+    int MPI_Scatterv(const void *sendbuf, const int *sendcounts, const int *displs,
+                 MPI_Datatype sendtype, void *recvbuf, int recvcount,
+                 MPI_Datatype recvtype, int root, MPI_Comm comm)
+    sendcounts
+    integer array (of length group size) specifying the number of elements to send to each processor
+    */
     MPI_Scatterv(vetor1, sendCounts, displs, MPI_INT,
                  local_vetor1, local_n, MPI_INT, 0, MPI_COMM_WORLD);
     MPI_Scatterv(vetor2, sendCounts, displs, MPI_INT,

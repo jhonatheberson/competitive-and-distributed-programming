@@ -58,8 +58,9 @@ void imprimeMatrix(double* matriz, int tamanho) {
 }
 
 /**
- * Constroi um tipo indexado do triangulo superior da matriz informada
- * O tipo construĆ­do vem no seguinte formato:
+ * Constroi um tipo indexado do triangulo superior
+ *  da matriz informada
+ * O tipo construído vem no seguinte formato:
  *
  * matriz = [ 0 1 2 ]
  *          [ 3 4 5 ]
@@ -70,7 +71,8 @@ void imprimeMatrix(double* matriz, int tamanho) {
  *                        [     8 ] )
  *
  */
-void constroiTipoIndexado(double* matriz, int n, MPI_Datatype* novoTipoConstruido) {
+void constroiTipoIndexado(double* matriz, int n, 
+MPI_Datatype* novoTipoConstruido) {
     int array_tamanhoDosBlocos[n];
     int array_distancias[n];
     array_distancias[0] = 0;

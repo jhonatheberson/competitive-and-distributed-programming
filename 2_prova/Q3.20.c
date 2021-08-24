@@ -135,17 +135,34 @@ void Get_input_pack(int my_rank, int comm_sz, double* a_p, double* b_p,
         int position = 0;
         printf("Enter a, b, and n\n");
         scanf("%lf %lf %d", a_p, b_p, n_p);
+
+        // int MPI_Pack(const void *inbuf,
+        //      int incount,
+        //      MPI_Datatype datatype, void *outbuf, int outsize, int *position, MPI_Comm comm)
+        // output buffer size, in bytes (non-negative integer)
         MPI_Pack(a_p, 1, MPI_DOUBLE, pack_buf, 1000, &position, MPI_COMM_WORLD);
         MPI_Pack(b_p, 1, MPI_DOUBLE, pack_buf, 1000, &position, MPI_COMM_WORLD);
         MPI_Pack(n_p, 1, MPI_INT, pack_buf, 1000, &position, MPI_COMM_WORLD);
     }
     int positionUnpack = 0;
     MPI_Bcast(pack_buf, 1000, MPI_PACKED, 0, MPI_COMM_WORLD);
+    // int MPI_Unpack(const void *inbuf, int insize, int *position,
+    //            void *outbuf, int outcount, MPI_Datatype datatype, MPI_Comm comm)
+    // input buffer start (choice)
     MPI_Unpack(pack_buf, 1000, &positionUnpack, a_p, 1, MPI_DOUBLE, MPI_COMM_WORLD);
     MPI_Unpack(pack_buf, 1000, &positionUnpack, b_p, 1, MPI_DOUBLE, MPI_COMM_WORLD);
     MPI_Unpack(pack_buf, 1000, &positionUnpack, n_p, 1, MPI_INT, MPI_COMM_WORLD);
 
-}  /* Get_input */
+}  
+
+
+
+
+
+
+
+
+/* Get_input */
 
 /*------------------------------------------------------------------
  * Function:     Trap

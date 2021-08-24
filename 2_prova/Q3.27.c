@@ -33,7 +33,18 @@ int main(int argc, char* argv[]) {
     int  n;
     char g_i;
     int* a;
+    int my_rank, comm_sz, n, local_n;
+    double start, finish, loc_elapsed, tempo_minimo, tempo_medio, tempoMaximo;
 
+    /* Let the system do what it needs to start up MPI */
+    MPI_Init(NULL, NULL);
+
+    /* Get my process rank */
+    MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+
+    /* Find out how many processes are being used */
+    MPI_Comm_size(MPI_COMM_WORLD, &comm_sz);
+    start = MPI_Wtime();
     Get_args(argc, argv, &n, &g_i);
     a = (int*) malloc(n*sizeof(int));
     if (g_i == 'g') {
@@ -48,6 +59,17 @@ int main(int argc, char* argv[]) {
     Print_list(a, n, "After sort");
 
     free(a);
+    finish = MPI_Wtime();
+    loc_elapsed = finish-start;
+    if (my_rank == 0) {
+        
+
+    printf("Tempo gasto = %e\n", loc_elapsed);
+        
+    }
+        /* Shut down MPI */
+    MPI_Finalize();
+
     return 0;
 }  /* main */
 
